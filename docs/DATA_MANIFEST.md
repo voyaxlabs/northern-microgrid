@@ -52,6 +52,13 @@ northern-microgrid run --root .  # fetches missing years from NASA POWER
 
 Use `--no-fetch` to require existing caches only.
 
+The run first rejects present caches that differ from the inventory, then acquires
+only missing site-years requested by the run. Before simulation, the complete
+inventory and requested caches must pass the recorded SHA-256/raw-row policy,
+weather-value, ordered-calendar and site/year/coordinate checks. Downloads do not
+update or bypass the shipped manifest: changed upstream data or different Parquet
+bytes are rejected. `--no-fetch` never acquires a missing file.
+
 ## Machine-checkable inventory
 
 [data/weather/manifest.json](../data/weather/manifest.json) records each of the 20 files, actual raw rows, SHA-256, coordinates, weather year, unavailable acquisition/release fields, and API request parameters (community RE, time-standard UTC). The pipeline validates hashes and complete ordered hourly calendars before simulation. Known acquisition dates for future downloads are recorded in per-cache metadata sidecars; original retrieval history cannot be recovered from the cache values.

@@ -54,9 +54,27 @@ def run_pipeline(
     years = weather_years or DEFAULT_WEATHER_YEARS
     constraints = constraints or SizingConstraints()
 
-    verify_data_manifest(project_root)
-    used_weather: list[Path] = []
     pipeline_start = time.perf_counter()
+    missing = {
+        paths.weather / site_id / f"{year}.parquet"
+        for site_id in sites
+        for year in years
+        if fetch_weather and not (paths.weather / site_id / f"{year}.parquet").exists()
+    }
+    # Reject modified inventory before acquisition; defer only requested absent caches.
+    verify_data_manifest(project_root, allow_missing=missing)
+    for site_id in sites:
+        site = CANADIAN_SITES[site_id]
+        for year in years:
+            if paths.weather / site_id / f"{year}.parquet" in missing:
+                fetch_weather_year(site.latitude, site.longitude, year, paths.weather, site_id)
+    # Downloads must satisfy the unchanged manifest and weather validation before simulation.
+    verify_data_manifest(project_root)
+    for site_id in sites:
+        for year in years:
+            load_weather_year(paths.weather / site_id / f"{year}.parquet")
+
+    used_weather: list[Path] = []
     timing: dict[str, float] = {}
     all_results: dict[str, Any] = {
         "version": __version__,

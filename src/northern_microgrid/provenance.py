@@ -18,8 +18,8 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def verify_data_manifest(root: Path) -> None:
-    """Fail on a modified shipped cache or mismatched raw row count."""
+def verify_data_manifest(root: Path, *, allow_missing: set[Path] | None = None) -> None:
+    """Check shipped bytes/rows, optionally deferring explicitly requested absent files."""
     manifest_path = root / "data/weather/manifest.json"
     if not manifest_path.exists():
         return  # Library callers may supply their own, calendar-validated weather.
@@ -27,6 +27,8 @@ def verify_data_manifest(root: Path) -> None:
 
     for record in json.loads(manifest_path.read_text())["files"]:
         path = root / record["path"]
+        if not path.exists() and allow_missing is not None and path in allow_missing:
+            continue
         if sha256(path) != record["sha256"] or len(pd.read_parquet(path)) != record["rows"]:
             raise ValueError(f"Data manifest mismatch: {record['path']}")
 

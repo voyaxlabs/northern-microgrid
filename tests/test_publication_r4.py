@@ -119,11 +119,13 @@ def test_cli_does_not_acquire_unrequested_missing_cache(cache_root: Path, monkey
 def test_cli_validates_acquired_cache_before_simulation(
     cache_root: Path, monkeypatch, damage: str, message: str
 ) -> None:
-    path = cache_root / CACHE
+    # A non-optimization year must be rejected before even the first simulation.
+    relative_path = Path("data/weather/iqaluit/2022.parquet")
+    path = cache_root / relative_path
     raw = pd.read_parquet(path)
     manifest_path = cache_root / "data/weather/manifest.json"
     manifest = json.loads(manifest_path.read_text())
-    record = next(record for record in manifest["files"] if record["path"] == str(CACHE))
+    record = next(record for record in manifest["files"] if record["path"] == str(relative_path))
     if damage == "calendar":
         raw.loc[100, "timestamp"] = raw.loc[99, "timestamp"]
     elif damage == "values":

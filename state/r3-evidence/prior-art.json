@@ -1,0 +1,33 @@
+{
+  "inspected_date": "2026-10-01",
+  "method": "GitHub API repository revisions and UTF-8 file fetches; no tool execution",
+  "sources": [
+    {
+      "tool": "SAMA",
+      "repository": "Sas1997/SAMA",
+      "revision": "383d229a51c380bb923e2f284e2e3f5466a2f9ff",
+      "url": "https://github.com/Sas1997/SAMA/blob/383d229a51c380bb923e2f284e2e3f5466a2f9ff/README.md",
+      "sha256": "9a31c500ea3e1eb03845541a3c63b0aa1f44cc66bca935384ca23eb48c83a4ea"
+    },
+    {
+      "tool": "SAMBA",
+      "repository": "sambaenergies/samba",
+      "revision": "fc5b8b5c11b0f4a89031680c0c6f2a568c17fb45",
+      "url": "https://github.com/sambaenergies/samba/blob/fc5b8b5c11b0f4a89031680c0c6f2a568c17fb45/README.md",
+      "sha256": "0f9ed414b4967e25b8742a658ae37b0bf7b1278c6adac9e5359bafd53b5aa3e7"
+    },
+    {
+      "tool": "MicroGridsPy",
+      "repository": "MicroGridsPy/ECOS_2024_MultiGood",
+      "revision": "9ddae36012efe7bb1c726504d2b6b073ba7b66df",
+      "url": "https://github.com/MicroGridsPy/ECOS_2024_MultiGood/blob/9ddae36012efe7bb1c726504d2b6b073ba7b66df/README.md",
+      "sha256": "09eeec3498f65766d6a0360ff68a76e5634478508b7bffa49a6b3b279078ea5f"
+    },
+    {
+      "tool": "SAMA",
+      "url": "https://github.com/Sas1997/SAMA/blob/383d229a51c380bb923e2f284e2e3f5466a2f9ff/License",
+      "sha256": "4260d7ece566fe71b0c4a29fa81de8f73293f3dec7537c1d6cbdbde692c01e98",
+      "designation": "AGPL v3; README says GPL v3"
+    }
+  ]
+}

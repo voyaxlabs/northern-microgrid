@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Northern Microgrid Sizing Report - Iqaluit</title>
+  <style>
+    :root { --accent: #1a5276; --bg: #f8f9fa; --text: #212529; }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; line-height: 1.5; color: var(--text);
+           max-width: 900px; margin: 0 auto; padding: 1.5rem; background: var(--bg); }
+    header { background: var(--accent); color: #fff; padding: 1.5rem; border-radius: 8px;
+              margin-bottom: 1.5rem; }
+    h1 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+    h2 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 0.25rem; }
+    main { background: #fff; padding: 1.5rem; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { border: 1px solid #dee2e6; padding: 0.5rem 0.75rem; text-align: left; }
+    th { background: #e9ecef; }
+    .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                   gap: 1rem; margin: 1rem 0; }
+    .metric-card { background: #e9ecef; padding: 1rem; border-radius: 6px; text-align: center; }
+    .metric-card .value { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
+    .metric-card .label { font-size: 0.85rem; color: #6c757d; }
+    .figure { text-align: center; margin: 1rem 0; }
+    .figure img { max-width: 100%; height: auto; border: 1px solid #dee2e6; border-radius: 4px; }
+    footer { margin-top: 1.5rem; font-size: 0.85rem; color: #6c757d; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Northern Microgrid Sizing Report</h1>
+    <p>Iqaluit, Nunavut - Remote Camp</p>
+  </header>
+  <main role="main">
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Simulation-only scenario summary</h2>
+      <p>Weather year: 2018. Synthetic load: 175200 kWh/year;
+      realized peak 43.44 kW. No matched measured-site validation.</p>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="value">43.9%</div>
+          <div class="label">Renewable Delivered to Load</div>
+        </div>
+        <div class="metric-card">
+          <div class="value">34087 L</div>
+          <div class="label">Annual Diesel</div>
+        </div>
+        <div class="metric-card">
+          <div class="value">$1473915</div>
+          <div class="label">Net Present Cost</div>
+        </div>
+        <div class="metric-card">
+          <div class="value">0.000%</div>
+          <div class="label">Unmet Load</div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="design-heading">
+      <h2 id="design-heading">Simulation Design (not validated for deployment)</h2>
+      <table>
+        <caption class="sr-only">System component sizing</caption>
+        <thead>
+          <tr><th scope="col">Component</th><th scope="col">Capacity</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Photovoltaic</td><td>140.0 kW</td></tr>
+          <tr><td>Wind turbine</td><td>0.0 kW</td></tr>
+          <tr><td>Battery power</td><td>125.0 kW</td></tr>
+          <tr><td>Battery energy</td><td>250.0 kWh</td></tr>
+          <tr><td>Diesel backup</td><td>47.78 kW</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="baseline-heading">
+      <h2 id="baseline-heading">Baseline Comparison</h2>
+      <table>
+        <caption class="sr-only">Comparison against baseline methods</caption>
+        <thead>
+          <tr>
+            <th scope="col">Method</th>
+            <th scope="col">NPC (CAD)</th>
+            <th scope="col">Diesel (L/yr)</th>
+            <th scope="col">Renewable %</th>
+            <th scope="col">Unmet %</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>Diesel Only</td>
+            <td>$1656481</td>
+            <td>57483</td>
+            <td>0.0</td>
+            <td>0.000</td>
+          </tr>
+          
+          <tr>
+            <td>Rule Of Thumb</td>
+            <td>$2067488</td>
+            <td>27556</td>
+            <td>52.7</td>
+            <td>0.000</td>
+          </tr>
+          
+          <tr>
+            <td>Fixed Renewable</td>
+            <td>$1486597</td>
+            <td>37879</td>
+            <td>38.2</td>
+            <td>0.000</td>
+          </tr>
+          
+          <tr>
+            <td>Optimized</td>
+            <td>$1473915</td>
+            <td>34087</td>
+            <td>43.9</td>
+            <td>0.000</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+
+    
+    <section aria-labelledby="figure-heading">
+      <h2 id="figure-heading">Monthly Energy Balance</h2>
+      <figure class="figure">
+        <img src="figures/iqaluit_monthly_balance.png" alt="Monthly energy balance chart for Iqaluit">
+      </figure>
+    </section>
+    
+
+    <section aria-labelledby="uncertainty-heading">
+      <h2 id="uncertainty-heading">Multi-Year Uncertainty</h2>
+      <table>
+        <caption class="sr-only">95 percent confidence intervals across weather years</caption>
+        <thead>
+          <tr><th scope="col">Metric</th><th scope="col">Estimate</th>
+              <th scope="col">95% CI Lower</th><th scope="col">95% CI Upper</th></tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td>annual_diesel_litres</td>
+            <td>32959.03</td>
+            <td>32514.96</td>
+            <td>33551.75</td>
+          </tr>
+          
+          <tr>
+            <td>renewable_fraction_pct</td>
+            <td>45.31</td>
+            <td>44.54</td>
+            <td>45.90</td>
+          </tr>
+          
+          <tr>
+            <td>npc_cad</td>
+            <td>1443627.68</td>
+            <td>1431706.61</td>
+            <td>1459539.31</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Storage boundary energy</h2>
+      <p>Unknown-source initial SOC 137.50 kWh;
+      terminal 37.50 kWh;
+      initial unknown energy delivered 94.53 kWh.
+      Conversion losses 13009.29 kWh.</p>
+      <h2>Fixed-design sensitivity</h2>
+      <p>Stipulated one-at-a-time stresses, no re-optimization: fuel +/-25%, CAPEX +25%,
+      battery replacement year 12/diesel year 15, snow cap 20%, and ideal efficiency without
+      temperature penalty or heating energy. Baseline is stressed consistently.</p>
+      <table><tr><th>Stress</th><th>NPC CAD</th><th>Savings %</th></tr>
+      <tr><td>base</td>
+      <td>1473915</td><td>11.02</td></tr>
+      <tr><td>fuel_low</td>
+      <td>1245146</td><td>2.01</td></tr>
+      <tr><td>fuel_high</td>
+      <td>1702683</td><td>16.63</td></tr>
+      <tr><td>capex_high</td>
+      <td>1594846</td><td>4.27</td></tr>
+      <tr><td>replacements</td>
+      <td>1558198</td><td>6.83</td></tr>
+      <tr><td>snow_high</td>
+      <td>1475012</td><td>10.96</td></tr>
+      <tr><td>battery_no_temp_penalty</td>
+      <td>1424550</td><td>14.00</td></tr>
+      </table>
+    </section>
+    <section aria-labelledby="limits-heading">
+      <h2 id="limits-heading">Limitations</h2>
+      <ul><li>Simulation-only: grid-optimal within the searched capacities, fixed dispatch and fixed diesel sizing; no field calibration or external validation.</li><li>PV uses a fixed GHI tilt factor and ambient rather than cell temperature; azimuth is ignored. 10 m wind is used without adjustment to the configured 30 m hub height.</li><li>Snow loss is uncalibrated and capped at 5% in the default scenario. Battery efficiency uses ambient temperature without heating loads, thermal dynamics, cold charging restrictions or capacity degradation.</li><li>Economics repeat one year&#39;s fuel and O&amp;M for 25 discounted years; replacement, fuel escalation, salvage and component degradation are omitted. All cost, load and coefficient values are stipulated scenario assumptions, not extracted quotes.</li><li>Bootstrap intervals estimate the five-year mean of fixed-design annual outcomes (1000 resamples, seed 42), not a future-year prediction interval or lifecycle-cost uncertainty. The optimization year is reused; consecutive-year independence and interval coverage are unchecked. Cost/load/model uncertainty and climate trends are excluded.</li><li>Diesel is sized at 110% of realized peak with unlimited fuel and no outages. Low unmet load is not redundancy, electrical stability, black-start or contingency evidence.</li><li>The 80%-of-optimized baseline depends on the proposed design; it is not an independently selected competitor. Loads are synthetic, with fixed UTC offsets and no DST.</li><li>Each year starts at midpoint SOC of unknown source and ends unconstrained. Stored sources are proportionally mixed. Initial energy is not credited as renewable; initial/terminal SOC and unknown-source delivery are quantified below. No warm-up or cyclic-year condition is imposed.</li><li>NASA POWER resolution is 0.5 x 0.625 degrees for meteorology and 1 x 1 degree for solar; site microclimate and long-term climate changes are not modelled.</li></ul>
+      <p>Input hashes, dependencies and source revision: 
+      <a href="evaluation_results.json">run metadata</a>.
+      <a href="../docs/LICENSING.md">Licence scope</a>: CC BY 4.0 outputs
+      and NASA POWER weather.</p>
+
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <p>Generated by northern-microgrid v0.1.0. Weather: NASA POWER (CC BY 4.0).</p>
+  </footer>
+</body>
+</html>

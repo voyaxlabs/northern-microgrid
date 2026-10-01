@@ -1,0 +1,4 @@
+NPC 100 / reference 100: 0.666666667
+NPC 80 / reference 100: 0.685185185
+NPC 50 / reference 100: 0.722222222
+Ideal endpoint: 1.0; empty endpoint: 0.0

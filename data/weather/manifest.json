@@ -1,0 +1,236 @@
+{
+  "source": "NASA POWER hourly point API",
+  "api_url": "https://power.larc.nasa.gov/api/temporal/hourly/point",
+  "community": "RE",
+  "time_standard": "UTC",
+  "parameters": [
+    "ALLSKY_SFC_SW_DWN",
+    "T2M",
+    "WS10M",
+    "PRECTOTCORR",
+    "ALLSKY_SFC_PAR_TOT"
+  ],
+  "retrieval_history": "Unavailable; years denote weather coverage, not acquisition. Source release not retained.",
+  "files": [
+    {
+      "path": "data/weather/dease_lake/2018.parquet",
+      "site_id": "dease_lake",
+      "year": 2018,
+      "latitude": 58.44,
+      "longitude": -130.03,
+      "rows": 8760,
+      "sha256": "ef65ea45f6294a5307204aa021cb28136bddbb2ba4fc826b397443de9538d129",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/dease_lake/2019.parquet",
+      "site_id": "dease_lake",
+      "year": 2019,
+      "latitude": 58.44,
+      "longitude": -130.03,
+      "rows": 8760,
+      "sha256": "568d73f10082760c65809dce3860c263ea66a2e81c6532a732ba024706a89774",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/dease_lake/2020.parquet",
+      "site_id": "dease_lake",
+      "year": 2020,
+      "latitude": 58.44,
+      "longitude": -130.03,
+      "rows": 8784,
+      "sha256": "2dbadf9b9171694fb6dbdd10fbfcbf267cd8d44b327657e44ad71018ae7bfda3",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/dease_lake/2021.parquet",
+      "site_id": "dease_lake",
+      "year": 2021,
+      "latitude": 58.44,
+      "longitude": -130.03,
+      "rows": 8760,
+      "sha256": "5898031cbfe84da1ae4ca34a440ff6c443147d25e0f637facca9431bc1952c2d",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/dease_lake/2022.parquet",
+      "site_id": "dease_lake",
+      "year": 2022,
+      "latitude": 58.44,
+      "longitude": -130.03,
+      "rows": 8760,
+      "sha256": "cdc3cf75184388cb2c56bfcf29bf09528ecf016735c22138f6f9ee5476421786",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/inuvik/2018.parquet",
+      "site_id": "inuvik",
+      "year": 2018,
+      "latitude": 68.36,
+      "longitude": -133.72,
+      "rows": 8760,
+      "sha256": "4a00f17276c2cb5d3f513a271984d3586d1ac00319abacbfe8fe142ae1bdfc0b",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/inuvik/2019.parquet",
+      "site_id": "inuvik",
+      "year": 2019,
+      "latitude": 68.36,
+      "longitude": -133.72,
+      "rows": 8760,
+      "sha256": "cf570c13a968dc0b14931f21c3f0ac400b2fa7e0935de112bff42f357b0cc1ef",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/inuvik/2020.parquet",
+      "site_id": "inuvik",
+      "year": 2020,
+      "latitude": 68.36,
+      "longitude": -133.72,
+      "rows": 8784,
+      "sha256": "fa49daeeba7893653b11f9120941dc39a3679d584d83200c5be1d7db9f9c0339",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/inuvik/2021.parquet",
+      "site_id": "inuvik",
+      "year": 2021,
+      "latitude": 68.36,
+      "longitude": -133.72,
+      "rows": 8760,
+      "sha256": "e8d67b707baaffd533410f84fb53a5b1214b0751caf7794585c7938ca487090e",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/inuvik/2022.parquet",
+      "site_id": "inuvik",
+      "year": 2022,
+      "latitude": 68.36,
+      "longitude": -133.72,
+      "rows": 8760,
+      "sha256": "8f0ea931f9c302b4fc3c320a131221c8cf0b6dfd13966f5ad2d191f7373aebee",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/iqaluit/2018.parquet",
+      "site_id": "iqaluit",
+      "year": 2018,
+      "latitude": 63.75,
+      "longitude": -68.52,
+      "rows": 8760,
+      "sha256": "b5c307e11342016a983a10378b1b07aeb754c724d46ec8ce4d6ee9a88478c31a",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/iqaluit/2019.parquet",
+      "site_id": "iqaluit",
+      "year": 2019,
+      "latitude": 63.75,
+      "longitude": -68.52,
+      "rows": 8760,
+      "sha256": "410c5306cd94eee8d3d972e2280a84db643d7b3d0dc48218211a22e0ba448252",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/iqaluit/2020.parquet",
+      "site_id": "iqaluit",
+      "year": 2020,
+      "latitude": 63.75,
+      "longitude": -68.52,
+      "rows": 8784,
+      "sha256": "ece0b94347b9c3dbb0ea72fd74284bdafb345849a936467bc913625c26fa2237",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/iqaluit/2021.parquet",
+      "site_id": "iqaluit",
+      "year": 2021,
+      "latitude": 63.75,
+      "longitude": -68.52,
+      "rows": 8760,
+      "sha256": "ec724cc8b8cad55dcf2a667d2ddac09097f3de17102db735d23a27f990c1184e",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/iqaluit/2022.parquet",
+      "site_id": "iqaluit",
+      "year": 2022,
+      "latitude": 63.75,
+      "longitude": -68.52,
+      "rows": 8760,
+      "sha256": "f6522c6695980bce4dcdb30a10c6d858d006d7208853fb8d9d1c0d6c0fc3dc1b",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/whitehorse/2018.parquet",
+      "site_id": "whitehorse",
+      "year": 2018,
+      "latitude": 60.72,
+      "longitude": -135.05,
+      "rows": 8760,
+      "sha256": "72171770b5a96bdb3ebaf5119b5a2828fc68fdcd0003e45d02ac3828f191c973",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/whitehorse/2019.parquet",
+      "site_id": "whitehorse",
+      "year": 2019,
+      "latitude": 60.72,
+      "longitude": -135.05,
+      "rows": 8760,
+      "sha256": "b37110f3deef591c46f5088881242c45aff366c3d222f1be4c6b3ab05590a409",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/whitehorse/2020.parquet",
+      "site_id": "whitehorse",
+      "year": 2020,
+      "latitude": 60.72,
+      "longitude": -135.05,
+      "rows": 8784,
+      "sha256": "74eebc3ab9f41ff48f08ce013efeddc204d9a81322c2f789991d236dafaf9877",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/whitehorse/2021.parquet",
+      "site_id": "whitehorse",
+      "year": 2021,
+      "latitude": 60.72,
+      "longitude": -135.05,
+      "rows": 8760,
+      "sha256": "9de3a61d518fb68cd233e0deb58bb6bead939d816de53b688add4ec4b675f4dc",
+      "acquired_at": null,
+      "source_release": null
+    },
+    {
+      "path": "data/weather/whitehorse/2022.parquet",
+      "site_id": "whitehorse",
+      "year": 2022,
+      "latitude": 60.72,
+      "longitude": -135.05,
+      "rows": 8760,
+      "sha256": "e02f69406bd29d101b7fcab6289538a62f8afc80db9986366a60784cef92b34e",
+      "acquired_at": null,
+      "source_release": null
+    }
+  ]
+}

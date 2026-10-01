@@ -1,0 +1,1412 @@
+{
+  "version": "0.1.0",
+  "archetype": "remote_camp",
+  "weather_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "sites": {
+    "iqaluit": {
+      "site": {
+        "name": "Iqaluit",
+        "latitude": 63.75,
+        "longitude": -68.52,
+        "province_territory": "Nunavut",
+        "elevation_m": 34.0,
+        "utc_offset_hours": -5
+      },
+      "years": {},
+      "sensitivity": {
+        "base": {
+          "npc_cad": 1473914.6628855288,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 11.021319558590491,
+          "renewable_fraction": 0.4389798131997387
+        },
+        "fuel_low": {
+          "npc_cad": 1245146.2273745092,
+          "diesel_baseline_npc_cad": 1270695.750371202,
+          "savings_pct": 2.0106719479646484,
+          "renewable_fraction": 0.4389798131997387
+        },
+        "fuel_high": {
+          "npc_cad": 1702683.0983965497,
+          "diesel_baseline_npc_cad": 2042265.6367243698,
+          "savings_pct": 16.62773599189983,
+          "renewable_fraction": 0.4389798131997387
+        },
+        "capex_high": {
+          "npc_cad": 1594846.1428993947,
+          "diesel_baseline_npc_cad": 1666037.1735616524,
+          "savings_pct": 4.273075762773382,
+          "renewable_fraction": 0.4389798131997387
+        },
+        "replacements": {
+          "npc_cad": 1558198.2912309815,
+          "diesel_baseline_npc_cad": 1672431.0344014016,
+          "savings_pct": 6.830341031748821,
+          "renewable_fraction": 0.4389798131997387
+        },
+        "snow_high": {
+          "npc_cad": 1475012.204565219,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 10.955062119915516,
+          "renewable_fraction": 0.4379705949213997
+        },
+        "battery_no_temp_penalty": {
+          "npc_cad": 1424549.6094724573,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 14.00143599492174,
+          "renewable_fraction": 0.46785132953748343
+        }
+      },
+      "load_statistics": {
+        "annual_kwh": 175200.0,
+        "mean_daily_kwh": 480.0,
+        "peak_kw": 43.438545517572805
+      },
+      "optimized_design": {
+        "pv": {
+          "capacity_kw": 140.0,
+          "tilt_deg": 45.0,
+          "azimuth_deg": 180.0,
+          "derate": 0.86,
+          "temp_coeff_pct_per_c": -0.35,
+          "ref_temp_c": 25.0,
+          "snow_loss_fraction": 0.05
+        },
+        "wind": {
+          "capacity_kw": 0.0,
+          "hub_height_m": 30.0,
+          "cut_in_ms": 3.0,
+          "rated_ms": 12.0,
+          "cut_out_ms": 25.0,
+          "availability": 0.95
+        },
+        "battery": {
+          "power_kw": 125.0,
+          "energy_kwh": 250.0,
+          "round_trip_efficiency": 0.92,
+          "min_soc": 0.15,
+          "max_soc": 0.95,
+          "temp_coeff_pct_per_c": 0.5,
+          "ref_temp_c": 25.0
+        },
+        "diesel": {
+          "capacity_kw": 47.78240006933009,
+          "min_load_fraction": 0.4,
+          "fuel_l_per_kwh": 0.28,
+          "fuel_cost_cad_per_l": 2.1,
+          "co2_kg_per_l": 2.68
+        },
+        "economics": {
+          "project_lifetime_years": 25,
+          "discount_rate": 0.06,
+          "pv_capex_cad_per_kw": 2200.0,
+          "wind_capex_cad_per_kw": 2800.0,
+          "battery_power_capex_cad_per_kw": 400.0,
+          "battery_energy_capex_cad_per_kwh": 350.0,
+          "diesel_capex_cad_per_kw": 800.0,
+          "fixed_om_cad_per_year": 5000.0,
+          "variable_om_cad_per_mwh": 5.0
+        }
+      },
+      "sizing_evaluations": 4851,
+      "year_metrics": {
+        "2018": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 121740.16286111115,
+            "diesel_litres": 34087.24560111113,
+            "diesel_dump_kwh": 23543.95973392399,
+            "pv_generation_kwh": 110894.6538163852,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 20981.571097965643,
+            "gross_renewable_fraction": 0.6329603528332488,
+            "renewable_fraction": 0.4389798131997387,
+            "renewable_delivered_kwh": 76909.26327259422,
+            "battery_storage_loss_kwh": 13009.285845606722,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 91353.81821097783,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 94.53360021861954
+          },
+          "lifecycle": {
+            "npc_cad": 1473914.6628855288,
+            "lcoe_cad_per_kwh": 0.658102208918294,
+            "annual_diesel_litres": 34087.24560111113,
+            "annual_co2_kg": 91353.81821097783,
+            "capex_cad": 483725.9200554641
+          }
+        },
+        "2019": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 116992.47342444852,
+            "diesel_litres": 32757.892558845586,
+            "diesel_dump_kwh": 21483.740571883267,
+            "pv_generation_kwh": 120389.95876745968,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 28386.354547817573,
+            "gross_renewable_fraction": 0.6871572989010256,
+            "renewable_fraction": 0.454306343214733,
+            "renewable_delivered_kwh": 79594.47133122123,
+            "battery_storage_loss_kwh": 12412.337072207374,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 87791.15205770617,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 96.79581621351826
+          },
+          "lifecycle": {
+            "npc_cad": 1438228.1167468776,
+            "lcoe_cad_per_kwh": 0.6421681827267552,
+            "annual_diesel_litres": 32757.892558845586,
+            "annual_co2_kg": 87791.15205770617,
+            "capex_cad": 483725.9200554641
+          }
+        },
+        "2020": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 116925.46536293154,
+            "diesel_litres": 32739.130301620837,
+            "diesel_dump_kwh": 21577.807244583208,
+            "pv_generation_kwh": 119076.2432614515,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 26034.721490338565,
+            "gross_renewable_fraction": 0.6796589227251798,
+            "renewable_fraction": 0.45523216571522856,
+            "renewable_delivered_kwh": 79756.67543330805,
+            "battery_storage_loss_kwh": 13289.17988946127,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 87740.86920834385,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 95.66644834361432
+          },
+          "lifecycle": {
+            "npc_cad": 1437724.4430523596,
+            "lcoe_cad_per_kwh": 0.6419432926572805,
+            "annual_diesel_litres": 32739.130301620837,
+            "annual_co2_kg": 87740.86920834385,
+            "capex_cad": 483725.9200554641
+          }
+        },
+        "2021": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 117527.27080342187,
+            "diesel_litres": 32907.635824958124,
+            "diesel_dump_kwh": 22127.580370281197,
+            "pv_generation_kwh": 113267.0080833279,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 19861.339546241077,
+            "gross_renewable_fraction": 0.6465011876902278,
+            "renewable_fraction": 0.4549231502137534,
+            "renewable_delivered_kwh": 79702.5359174496,
+            "battery_storage_loss_kwh": 13705.358970227499,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 88192.46401088778,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 97.77364940974076
+          },
+          "lifecycle": {
+            "npc_cad": 1442247.9819032173,
+            "lcoe_cad_per_kwh": 0.6439630506424877,
+            "annual_diesel_litres": 32907.635824958124,
+            "annual_co2_kg": 88192.46401088778,
+            "capex_cad": 483725.9200554641
+          }
+        },
+        "2022": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 115368.74538091781,
+            "diesel_litres": 32303.248706656992,
+            "diesel_dump_kwh": 21204.576464560356,
+            "pv_generation_kwh": 127232.26035169345,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 32925.42642577497,
+            "gross_renewable_fraction": 0.726211531687748,
+            "renewable_fraction": 0.4619688082678647,
+            "renewable_delivered_kwh": 80936.93520852989,
+            "battery_storage_loss_kwh": 13371.002842275906,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 86572.70653384074,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 98.89587511267746
+          },
+          "lifecycle": {
+            "npc_cad": 1426023.1807427194,
+            "lcoe_cad_per_kwh": 0.6367186844984669,
+            "annual_diesel_litres": 32303.248706656992,
+            "annual_co2_kg": 86572.70653384074,
+            "capex_cad": 483725.9200554641
+          }
+        }
+      },
+      "uncertainty": [
+        {
+          "metric": "annual_diesel_litres",
+          "point_estimate": 32959.030598638536,
+          "lower_95": 32514.961089468812,
+          "upper_95": 33551.75193275996,
+          "n_samples": 5
+        },
+        {
+          "metric": "renewable_fraction_pct",
+          "point_estimate": 45.30820561222637,
+          "lower_95": 44.54174060281323,
+          "upper_95": 45.90271836464161,
+          "n_samples": 5
+        },
+        {
+          "metric": "npc_cad",
+          "point_estimate": 1443627.6770661403,
+          "lower_95": 1431706.609807178,
+          "upper_95": 1459539.3096911649,
+          "n_samples": 5
+        }
+      ],
+      "baselines": {
+        "diesel_only": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.0,
+          "gross_renewable_fraction": 0.0,
+          "diesel_litres": 57483.2191245958,
+          "diesel_dump_kwh": 30097.211159270686,
+          "npc_cad": 1656480.6935477864,
+          "lcoe_cad_per_kwh": 0.7396178563826193,
+          "co2_kg": 154055.02725391675,
+          "composite_score": 0.5
+        },
+        "rule_of_thumb": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.5268084829080161,
+          "gross_renewable_fraction": 0.868059912457027,
+          "diesel_litres": 27556.169587697208,
+          "diesel_dump_kwh": 16056.186278296913,
+          "npc_cad": 2067487.6142555217,
+          "lcoe_cad_per_kwh": 0.9231322546103502,
+          "co2_kg": 73850.53449502852,
+          "composite_score": 0.6572081615729913
+        },
+        "fixed_renewable": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.3816330871963963,
+          "gross_renewable_fraction": 0.5063682822665991,
+          "diesel_litres": 37878.7047451543,
+          "diesel_dump_kwh": 27020.111987241897,
+          "npc_cad": 1486596.5653409665,
+          "lcoe_cad_per_kwh": 0.6637646724444188,
+          "co2_kg": 101514.92871701352,
+          "composite_score": 0.6362194049454187
+        },
+        "optimized": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.4389798131997387,
+          "gross_renewable_fraction": 0.6329603528332488,
+          "diesel_litres": 34087.24560111113,
+          "diesel_dump_kwh": 23543.95973392399,
+          "npc_cad": 1473914.6628855288,
+          "lcoe_cad_per_kwh": 0.658102208918294,
+          "co2_kg": 91353.81821097783,
+          "composite_score": 0.6560466775256638
+        },
+        "load_statistics": {
+          "annual_kwh": 175200.0,
+          "mean_daily_kwh": 480.0,
+          "peak_kw": 43.438545517572805
+        }
+      },
+      "report_html": "results/report_iqaluit.html"
+    },
+    "inuvik": {
+      "site": {
+        "name": "Inuvik",
+        "latitude": 68.36,
+        "longitude": -133.72,
+        "province_territory": "Northwest Territories",
+        "elevation_m": 15.0,
+        "utc_offset_hours": -7
+      },
+      "years": {},
+      "sensitivity": {
+        "base": {
+          "npc_cad": 1447920.837853212,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 12.590539479689866,
+          "renewable_fraction": 0.43970737295747736
+        },
+        "fuel_low": {
+          "npc_cad": 1222213.3586002716,
+          "diesel_baseline_npc_cad": 1270695.750371202,
+          "savings_pct": 3.8154209421702556,
+          "renewable_fraction": 0.43970737295747736
+        },
+        "fuel_high": {
+          "npc_cad": 1673628.3171061524,
+          "diesel_baseline_npc_cad": 2042265.6367243698,
+          "savings_pct": 18.05040994615579,
+          "renewable_fraction": 0.43970737295747736
+        },
+        "capex_high": {
+          "npc_cad": 1565414.8178670774,
+          "diesel_baseline_npc_cad": 1666037.1735616524,
+          "savings_pct": 6.0396224821001265,
+          "renewable_fraction": 0.43970737295747736
+        },
+        "replacements": {
+          "npc_cad": 1525371.1374494808,
+          "diesel_baseline_npc_cad": 1672431.0344014016,
+          "savings_pct": 8.793181537949435,
+          "renewable_fraction": 0.43970737295747736
+        },
+        "snow_high": {
+          "npc_cad": 1448689.1001852301,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 12.544160289457784,
+          "renewable_fraction": 0.438308281917714
+        },
+        "battery_no_temp_penalty": {
+          "npc_cad": 1414192.0488129798,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 14.626711055465558,
+          "renewable_fraction": 0.45546983785504985
+        }
+      },
+      "load_statistics": {
+        "annual_kwh": 175200.0,
+        "mean_daily_kwh": 480.0,
+        "peak_kw": 43.438545517572805
+      },
+      "optimized_design": {
+        "pv": {
+          "capacity_kw": 140.0,
+          "tilt_deg": 45.0,
+          "azimuth_deg": 180.0,
+          "derate": 0.86,
+          "temp_coeff_pct_per_c": -0.35,
+          "ref_temp_c": 25.0,
+          "snow_loss_fraction": 0.05
+        },
+        "wind": {
+          "capacity_kw": 0.0,
+          "hub_height_m": 30.0,
+          "cut_in_ms": 3.0,
+          "rated_ms": 12.0,
+          "cut_out_ms": 25.0,
+          "availability": 0.95
+        },
+        "battery": {
+          "power_kw": 112.5,
+          "energy_kwh": 225.0,
+          "round_trip_efficiency": 0.92,
+          "min_soc": 0.15,
+          "max_soc": 0.95,
+          "temp_coeff_pct_per_c": 0.5,
+          "ref_temp_c": 25.0
+        },
+        "diesel": {
+          "capacity_kw": 47.78240006933009,
+          "min_load_fraction": 0.4,
+          "fuel_l_per_kwh": 0.28,
+          "fuel_cost_cad_per_l": 2.1,
+          "co2_kg_per_l": 2.68
+        },
+        "economics": {
+          "project_lifetime_years": 25,
+          "discount_rate": 0.06,
+          "pv_capex_cad_per_kw": 2200.0,
+          "wind_capex_cad_per_kw": 2800.0,
+          "battery_power_capex_cad_per_kw": 400.0,
+          "battery_energy_capex_cad_per_kwh": 350.0,
+          "diesel_capex_cad_per_kw": 800.0,
+          "fixed_om_cad_per_year": 5000.0,
+          "variable_om_cad_per_mwh": 5.0
+        }
+      },
+      "sizing_evaluations": 4851,
+      "year_metrics": {
+        "2018": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 120111.26107430249,
+            "diesel_litres": 33631.1531008047,
+            "diesel_dump_kwh": 22038.561989252747,
+            "pv_generation_kwh": 108986.0072092402,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 23760.651154068895,
+            "gross_renewable_fraction": 0.6220662511942934,
+            "renewable_fraction": 0.43970737295747736,
+            "renewable_delivered_kwh": 77036.73174215003,
+            "battery_storage_loss_kwh": 8188.055140221037,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 90131.4903101566,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 90.56917280024572
+          },
+          "lifecycle": {
+            "npc_cad": 1447920.837853212,
+            "lcoe_cad_per_kwh": 0.6464959781759297,
+            "annual_diesel_litres": 33631.1531008047,
+            "annual_co2_kg": 90131.4903101566,
+            "capex_cad": 469975.9200554641
+          }
+        },
+        "2019": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 121370.48915141265,
+            "diesel_litres": 33983.736962395546,
+            "diesel_dump_kwh": 22245.908965386,
+            "pv_generation_kwh": 111166.91444636052,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 28363.867817664694,
+            "gross_renewable_fraction": 0.6345143518627884,
+            "renewable_fraction": 0.4336679360887619,
+            "renewable_delivered_kwh": 75978.62240275109,
+            "battery_storage_loss_kwh": 6817.6268147224655,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 91076.41505922006,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 96.79741122226551
+          },
+          "lifecycle": {
+            "npc_cad": 1457385.9685177957,
+            "lcoe_cad_per_kwh": 0.6507221545991075,
+            "annual_diesel_litres": 33983.736962395546,
+            "annual_co2_kg": 91076.41505922006,
+            "capex_cad": 469975.9200554641
+          }
+        },
+        "2020": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 121473.50228052813,
+            "diesel_litres": 34012.58063854788,
+            "diesel_dump_kwh": 21872.655429101273,
+            "pv_generation_kwh": 109519.69231232397,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 26629.009278235488,
+            "gross_renewable_fraction": 0.625112399042945,
+            "renewable_fraction": 0.431000669305383,
+            "renewable_delivered_kwh": 75511.3172623031,
+            "battery_storage_loss_kwh": 7381.5298855153305,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 91153.71611130833,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 87.83588627004428
+          },
+          "lifecycle": {
+            "npc_cad": 1458160.2783866508,
+            "lcoe_cad_per_kwh": 0.6510678835940843,
+            "annual_diesel_litres": 34012.58063854788,
+            "annual_co2_kg": 91153.71611130833,
+            "capex_cad": 469975.9200554641
+          }
+        },
+        "2021": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 119184.15968371398,
+            "diesel_litres": 33371.56471143992,
+            "diesel_dump_kwh": 21448.51706481885,
+            "pv_generation_kwh": 109819.33592608338,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 24714.416385546716,
+            "gross_renewable_fraction": 0.6268226936420285,
+            "renewable_fraction": 0.4416525924890876,
+            "renewable_delivered_kwh": 77377.53420408815,
+            "battery_storage_loss_kwh": 7730.562159431782,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 89435.79342665899,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 86.82317701673674
+          },
+          "lifecycle": {
+            "npc_cad": 1440952.1750980287,
+            "lcoe_cad_per_kwh": 0.643384473508886,
+            "annual_diesel_litres": 33371.56471143992,
+            "annual_co2_kg": 89435.79342665899,
+            "capex_cad": 469975.9200554641
+          }
+        },
+        "2022": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 118226.2793668726,
+            "diesel_litres": 33103.35822272433,
+            "diesel_dump_kwh": 21103.41910158107,
+            "pv_generation_kwh": 110573.17079117942,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 24416.191013045634,
+            "gross_renewable_fraction": 0.6311254040592432,
+            "renewable_fraction": 0.4451598700310418,
+            "renewable_delivered_kwh": 77992.00922943852,
+            "battery_storage_loss_kwh": 8169.840043425298,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 88717.00003690121,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 85.13050526996085
+          },
+          "lifecycle": {
+            "npc_cad": 1433752.1590526877,
+            "lcoe_cad_per_kwh": 0.640169669705788,
+            "annual_diesel_litres": 33103.35822272433,
+            "annual_co2_kg": 88717.00003690121,
+            "capex_cad": 469975.9200554641
+          }
+        }
+      },
+      "uncertainty": [
+        {
+          "metric": "annual_diesel_litres",
+          "point_estimate": 33620.478727182475,
+          "lower_95": 33313.7443372548,
+          "upper_95": 33924.75766053831,
+          "n_samples": 5
+        },
+        {
+          "metric": "renewable_fraction_pct",
+          "point_estimate": 43.82376881743504,
+          "lower_95": 43.36645072987997,
+          "upper_95": 44.26664595995473,
+          "n_samples": 5
+        },
+        {
+          "metric": "npc_cad",
+          "point_estimate": 1447634.2837816752,
+          "lower_95": 1439399.9843815619,
+          "upper_95": 1455802.6663324207,
+          "n_samples": 5
+        }
+      ],
+      "baselines": {
+        "diesel_only": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.0,
+          "gross_renewable_fraction": 0.0,
+          "diesel_litres": 57483.2191245958,
+          "diesel_dump_kwh": 30097.211159270686,
+          "npc_cad": 1656480.6935477864,
+          "lcoe_cad_per_kwh": 0.7396178563826193,
+          "co2_kg": 154055.02725391675,
+          "composite_score": 0.5
+        },
+        "rule_of_thumb": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.49935732154465595,
+          "gross_renewable_fraction": 0.8531194302093167,
+          "diesel_litres": 28588.74159105004,
+          "diesel_dump_kwh": 14975.045929319127,
+          "npc_cad": 2095207.0591791458,
+          "lcoe_cad_per_kwh": 0.9355089738286207,
+          "co2_kg": 76617.8274640141,
+          "composite_score": 0.646962262824748
+        },
+        "fixed_renewable": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.3919720332256109,
+          "gross_renewable_fraction": 0.4976530009554347,
+          "diesel_litres": 37375.439465813564,
+          "diesel_dump_kwh": 27030.193153342174,
+          "npc_cad": 1462086.38479437,
+          "lcoe_cad_per_kwh": 0.6528208882723265,
+          "co2_kg": 100166.17776838035,
+          "composite_score": 0.6410464271651363
+        },
+        "optimized": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.43970737295747736,
+          "gross_renewable_fraction": 0.6220662511942934,
+          "diesel_litres": 33631.1531008047,
+          "diesel_dump_kwh": 22038.561989252747,
+          "npc_cad": 1447920.837853212,
+          "lcoe_cad_per_kwh": 0.6464959781759297,
+          "co2_kg": 90131.4903101566,
+          "composite_score": 0.6577661217428168
+        },
+        "load_statistics": {
+          "annual_kwh": 175200.0,
+          "mean_daily_kwh": 480.0,
+          "peak_kw": 43.438545517572805
+        }
+      },
+      "report_html": "results/report_inuvik.html"
+    },
+    "whitehorse": {
+      "site": {
+        "name": "Whitehorse",
+        "latitude": 60.72,
+        "longitude": -135.05,
+        "province_territory": "Yukon",
+        "elevation_m": 703.0,
+        "utc_offset_hours": -7
+      },
+      "years": {},
+      "sensitivity": {
+        "base": {
+          "npc_cad": 1363357.1532660436,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 17.695560317937787,
+          "renewable_fraction": 0.5032839961995187
+        },
+        "fuel_low": {
+          "npc_cad": 1158790.595159895,
+          "diesel_baseline_npc_cad": 1270695.750371202,
+          "savings_pct": 8.80660497830551,
+          "renewable_fraction": 0.5032839961995187
+        },
+        "fuel_high": {
+          "npc_cad": 1567923.711372192,
+          "diesel_baseline_npc_cad": 2042265.6367243698,
+          "savings_pct": 23.226259935166127,
+          "renewable_fraction": 0.5032839961995187
+        },
+        "capex_high": {
+          "npc_cad": 1480851.1332799096,
+          "diesel_baseline_npc_cad": 1666037.1735616524,
+          "savings_pct": 11.115360642635142,
+          "renewable_fraction": 0.5032839961995187
+        },
+        "replacements": {
+          "npc_cad": 1440807.4528623126,
+          "diesel_baseline_npc_cad": 1672431.0344014016,
+          "savings_pct": 13.849514675024677,
+          "renewable_fraction": 0.5032839961995187
+        },
+        "snow_high": {
+          "npc_cad": 1365167.3464383266,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 17.58628085700994,
+          "renewable_fraction": 0.5008132755387754
+        },
+        "battery_no_temp_penalty": {
+          "npc_cad": 1327884.5469245962,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 19.837004313006247,
+          "renewable_fraction": 0.5205044476074361
+        }
+      },
+      "load_statistics": {
+        "annual_kwh": 175200.0,
+        "mean_daily_kwh": 480.0,
+        "peak_kw": 43.438545517572805
+      },
+      "optimized_design": {
+        "pv": {
+          "capacity_kw": 140.0,
+          "tilt_deg": 45.0,
+          "azimuth_deg": 180.0,
+          "derate": 0.86,
+          "temp_coeff_pct_per_c": -0.35,
+          "ref_temp_c": 25.0,
+          "snow_loss_fraction": 0.05
+        },
+        "wind": {
+          "capacity_kw": 0.0,
+          "hub_height_m": 30.0,
+          "cut_in_ms": 3.0,
+          "rated_ms": 12.0,
+          "cut_out_ms": 25.0,
+          "availability": 0.95
+        },
+        "battery": {
+          "power_kw": 112.5,
+          "energy_kwh": 225.0,
+          "round_trip_efficiency": 0.92,
+          "min_soc": 0.15,
+          "max_soc": 0.95,
+          "temp_coeff_pct_per_c": 0.5,
+          "ref_temp_c": 25.0
+        },
+        "diesel": {
+          "capacity_kw": 47.78240006933009,
+          "min_load_fraction": 0.4,
+          "fuel_l_per_kwh": 0.28,
+          "fuel_cost_cad_per_l": 2.1,
+          "co2_kg_per_l": 2.68
+        },
+        "economics": {
+          "project_lifetime_years": 25,
+          "discount_rate": 0.06,
+          "pv_capex_cad_per_kw": 2200.0,
+          "wind_capex_cad_per_kw": 2800.0,
+          "battery_power_capex_cad_per_kw": 400.0,
+          "battery_energy_capex_cad_per_kwh": 350.0,
+          "diesel_capex_cad_per_kw": 800.0,
+          "fixed_om_cad_per_year": 5000.0,
+          "variable_om_cad_per_mwh": 5.0
+        }
+      },
+      "sizing_evaluations": 4851,
+      "year_metrics": {
+        "2018": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 108861.02378656097,
+            "diesel_litres": 30481.086660237073,
+            "diesel_dump_kwh": 21926.665715941584,
+            "pv_generation_kwh": 124623.43417092663,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 27229.230120577497,
+            "gross_renewable_fraction": 0.7113209712952433,
+            "renewable_fraction": 0.5032839961995187,
+            "renewable_delivered_kwh": 88175.35613415568,
+            "battery_storage_loss_kwh": 9218.56212096849,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 81689.31224943536,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 90.28579522494692
+          },
+          "lifecycle": {
+            "npc_cad": 1363357.1532660436,
+            "lcoe_cad_per_kwh": 0.6087383324841944,
+            "annual_diesel_litres": 30481.086660237073,
+            "annual_co2_kg": 81689.31224943536,
+            "capex_cad": 469975.9200554641
+          }
+        },
+        "2019": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 107692.43439666837,
+            "diesel_litres": 30153.881631067146,
+            "diesel_dump_kwh": 21450.78754599028,
+            "pv_generation_kwh": 119700.64036695898,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 22133.843886313512,
+            "gross_renewable_fraction": 0.6832228331447431,
+            "renewable_fraction": 0.5071978250132242,
+            "renewable_delivered_kwh": 88861.05894231689,
+            "battery_storage_loss_kwh": 8698.443331323575,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 80812.40277125996,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 97.29420700502305
+          },
+          "lifecycle": {
+            "npc_cad": 1354573.3185742667,
+            "lcoe_cad_per_kwh": 0.604816354394829,
+            "annual_diesel_litres": 30153.881631067146,
+            "annual_co2_kg": 80812.40277125996,
+            "capex_cad": 469975.9200554641
+          }
+        },
+        "2020": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 111427.87918798695,
+            "diesel_litres": 31199.80617263635,
+            "diesel_dump_kwh": 22651.033609765647,
+            "pv_generation_kwh": 117881.70055593443,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 22512.441778410463,
+            "gross_renewable_fraction": 0.6728407565977992,
+            "renewable_fraction": 0.4927277190419801,
+            "renewable_delivered_kwh": 86325.89637615491,
+            "battery_storage_loss_kwh": 9036.104355745258,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 83615.48054266542,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 97.25804562379199
+          },
+          "lifecycle": {
+            "npc_cad": 1382651.213026327,
+            "lcoe_cad_per_kwh": 0.6173531211602131,
+            "annual_diesel_litres": 31199.80617263635,
+            "annual_co2_kg": 83615.48054266542,
+            "capex_cad": 469975.9200554641
+          }
+        },
+        "2021": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 112891.56454420653,
+            "diesel_litres": 31609.63807237783,
+            "diesel_dump_kwh": 23061.43671647416,
+            "pv_generation_kwh": 120011.11944305857,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 26133.666071280037,
+            "gross_renewable_fraction": 0.6849949739900604,
+            "renewable_fraction": 0.48673499653565266,
+            "renewable_delivered_kwh": 85275.97139304635,
+            "battery_storage_loss_kwh": 8597.581199510914,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 84713.8300339726,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 93.90077922128694
+          },
+          "lifecycle": {
+            "npc_cad": 1393653.170019099,
+            "lcoe_cad_per_kwh": 0.6222654898214981,
+            "annual_diesel_litres": 31609.63807237783,
+            "annual_co2_kg": 84713.8300339726,
+            "capex_cad": 469975.9200554641
+          }
+        },
+        "2022": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 110861.18003044877,
+            "diesel_litres": 31041.13040852566,
+            "diesel_dump_kwh": 22177.1651514697,
+            "pv_generation_kwh": 123759.26790193052,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 28567.408296528098,
+            "gross_renewable_fraction": 0.7063885154219779,
+            "renewable_fraction": 0.49327246604058345,
+            "renewable_delivered_kwh": 86421.33605031022,
+            "battery_storage_loss_kwh": 8765.874484381497,
+            "initial_soc_kwh": 123.74999999999999,
+            "terminal_soc_kwh": 33.75,
+            "co2_kg": 83190.22949484877,
+            "terminal_renewable_soc_kwh": 33.75,
+            "initial_unknown_to_load_kwh": 94.64907071072594
+          },
+          "lifecycle": {
+            "npc_cad": 1378391.5545330716,
+            "lcoe_cad_per_kwh": 0.6154511856314893,
+            "annual_diesel_litres": 31041.13040852566,
+            "annual_co2_kg": 83190.22949484877,
+            "capex_cad": 469975.9200554641
+          }
+        }
+      },
+      "uncertainty": [
+        {
+          "metric": "annual_diesel_litres",
+          "point_estimate": 30897.10858896881,
+          "lower_95": 30445.032919329282,
+          "upper_95": 31332.003779710805,
+          "n_samples": 5
+        },
+        {
+          "metric": "renewable_fraction_pct",
+          "point_estimate": 49.66434005661919,
+          "lower_95": 49.043957943916986,
+          "upper_95": 50.31052593177098,
+          "n_samples": 5
+        },
+        {
+          "metric": "npc_cad",
+          "point_estimate": 1374525.2818837618,
+          "lower_95": 1362389.288863233,
+          "upper_95": 1386200.064124785,
+          "n_samples": 5
+        }
+      ],
+      "baselines": {
+        "diesel_only": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.0,
+          "gross_renewable_fraction": 0.0,
+          "diesel_litres": 57483.2191245958,
+          "diesel_dump_kwh": 30097.211159270686,
+          "npc_cad": 1656480.6935477864,
+          "lcoe_cad_per_kwh": 0.7396178563826193,
+          "co2_kg": 154055.02725391675,
+          "composite_score": 0.5
+        },
+        "rule_of_thumb": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.5813620104124458,
+          "gross_renewable_fraction": 0.9755259034906193,
+          "diesel_litres": 24316.901596394266,
+          "diesel_dump_kwh": 14088.322113372515,
+          "npc_cad": 1980529.3097632236,
+          "lcoe_cad_per_kwh": 0.8843054122488427,
+          "co2_kg": 65169.29627833664,
+          "composite_score": 0.6789377480888562
+        },
+        "fixed_renewable": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.4505300104018622,
+          "gross_renewable_fraction": 0.5690567770361946,
+          "diesel_litres": 34531.7826558326,
+          "diesel_dump_kwh": 27133.453669290757,
+          "npc_cad": 1385748.2814272386,
+          "lcoe_cad_per_kwh": 0.6187359607554314,
+          "co2_kg": 92545.17751763137,
+          "composite_score": 0.665008580900016
+        },
+        "optimized": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.5032839961995187,
+          "gross_renewable_fraction": 0.7113209712952433,
+          "diesel_litres": 30481.086660237073,
+          "diesel_dump_kwh": 21926.665715941584,
+          "npc_cad": 1363357.1532660436,
+          "lcoe_cad_per_kwh": 0.6087383324841944,
+          "co2_kg": 81689.31224943536,
+          "composite_score": 0.6839389965168791
+        },
+        "load_statistics": {
+          "annual_kwh": 175200.0,
+          "mean_daily_kwh": 480.0,
+          "peak_kw": 43.438545517572805
+        }
+      },
+      "report_html": "results/report_whitehorse.html"
+    },
+    "dease_lake": {
+      "site": {
+        "name": "Dease Lake",
+        "latitude": 58.44,
+        "longitude": -130.03,
+        "province_territory": "British Columbia",
+        "elevation_m": 816.0,
+        "utc_offset_hours": -7
+      },
+      "years": {},
+      "sensitivity": {
+        "base": {
+          "npc_cad": 1352327.95685874,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 18.361381323293536,
+          "renewable_fraction": 0.5344721031666795
+        },
+        "fuel_low": {
+          "npc_cad": 1159456.1978544171,
+          "diesel_baseline_npc_cad": 1270695.750371202,
+          "savings_pct": 8.754224013442158,
+          "renewable_fraction": 0.5344721031666795
+        },
+        "fuel_high": {
+          "npc_cad": 1545199.715863063,
+          "diesel_baseline_npc_cad": 2042265.6367243698,
+          "savings_pct": 24.338945528093035,
+          "renewable_fraction": 0.5344721031666795
+        },
+        "capex_high": {
+          "npc_cad": 1478759.436872606,
+          "diesel_baseline_npc_cad": 1666037.1735616524,
+          "savings_pct": 11.240909846488256,
+          "renewable_fraction": 0.5344721031666795
+        },
+        "replacements": {
+          "npc_cad": 1436611.5852041927,
+          "diesel_baseline_npc_cad": 1672431.0344014016,
+          "savings_pct": 14.100399020735333,
+          "renewable_fraction": 0.5344721031666795
+        },
+        "snow_high": {
+          "npc_cad": 1354374.5392321262,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 18.23783129452725,
+          "renewable_fraction": 0.5306303343326775
+        },
+        "battery_no_temp_penalty": {
+          "npc_cad": 1308720.7896589627,
+          "diesel_baseline_npc_cad": 1656480.6935477864,
+          "savings_pct": 20.993900215281403,
+          "renewable_fraction": 0.555782149221152
+        }
+      },
+      "load_statistics": {
+        "annual_kwh": 175200.0,
+        "mean_daily_kwh": 480.0,
+        "peak_kw": 43.438545517572805
+      },
+      "optimized_design": {
+        "pv": {
+          "capacity_kw": 150.0,
+          "tilt_deg": 45.0,
+          "azimuth_deg": 180.0,
+          "derate": 0.86,
+          "temp_coeff_pct_per_c": -0.35,
+          "ref_temp_c": 25.0,
+          "snow_loss_fraction": 0.05
+        },
+        "wind": {
+          "capacity_kw": 0.0,
+          "hub_height_m": 30.0,
+          "cut_in_ms": 3.0,
+          "rated_ms": 12.0,
+          "cut_out_ms": 25.0,
+          "availability": 0.95
+        },
+        "battery": {
+          "power_kw": 125.0,
+          "energy_kwh": 250.0,
+          "round_trip_efficiency": 0.92,
+          "min_soc": 0.15,
+          "max_soc": 0.95,
+          "temp_coeff_pct_per_c": 0.5,
+          "ref_temp_c": 25.0
+        },
+        "diesel": {
+          "capacity_kw": 47.78240006933009,
+          "min_load_fraction": 0.4,
+          "fuel_l_per_kwh": 0.28,
+          "fuel_cost_cad_per_l": 2.1,
+          "co2_kg_per_l": 2.68
+        },
+        "economics": {
+          "project_lifetime_years": 25,
+          "discount_rate": 0.06,
+          "pv_capex_cad_per_kw": 2200.0,
+          "wind_capex_cad_per_kw": 2800.0,
+          "battery_power_capex_cad_per_kw": 400.0,
+          "battery_energy_capex_cad_per_kwh": 350.0,
+          "diesel_capex_cad_per_kw": 800.0,
+          "fixed_om_cad_per_year": 5000.0,
+          "variable_om_cad_per_mwh": 5.0
+        }
+      },
+      "sizing_evaluations": 4851,
+      "year_metrics": {
+        "2018": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 102637.58328392365,
+            "diesel_litres": 28738.523319498625,
+            "diesel_dump_kwh": 21174.81739150348,
+            "pv_generation_kwh": 141293.59040404507,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 36405.554896592665,
+            "gross_renewable_fraction": 0.8064702648632709,
+            "renewable_fraction": 0.5344721031666795,
+            "renewable_delivered_kwh": 93639.51247480224,
+            "battery_storage_loss_kwh": 11250.801399872536,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 77019.24249625632,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 97.72163277759682
+          },
+          "lifecycle": {
+            "npc_cad": 1352327.95685874,
+            "lcoe_cad_per_kwh": 0.6038138014370371,
+            "annual_diesel_litres": 28738.523319498625,
+            "annual_co2_kg": 77019.24249625632,
+            "capex_cad": 505725.9200554641
+          }
+        },
+        "2019": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 102450.8428496877,
+            "diesel_litres": 28686.235997912558,
+            "diesel_dump_kwh": 21081.955984890563,
+            "pv_generation_kwh": 136278.08060041856,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 31775.446056901066,
+            "gross_renewable_fraction": 0.7778429258014757,
+            "renewable_fraction": 0.5349461320566383,
+            "renewable_delivered_kwh": 93722.56233632303,
+            "battery_storage_loss_kwh": 10771.52140831462,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 76879.11247440566,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 108.5507988798272
+          },
+          "lifecycle": {
+            "npc_cad": 1350924.3012045075,
+            "lcoe_cad_per_kwh": 0.6031870698426837,
+            "annual_diesel_litres": 28686.235997912558,
+            "annual_co2_kg": 76879.11247440566,
+            "capex_cad": 505725.9200554641
+          }
+        },
+        "2020": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 103096.24890609508,
+            "diesel_litres": 28866.949693706625,
+            "diesel_dump_kwh": 21984.65206287126,
+            "pv_generation_kwh": 135418.08592589817,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 29779.418112209038,
+            "gross_renewable_fraction": 0.7729342803989622,
+            "renewable_fraction": 0.5364091420771069,
+            "renewable_delivered_kwh": 93978.88169190913,
+            "battery_storage_loss_kwh": 11650.26465691295,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 77363.42517913376,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 109.52146486705897
+          },
+          "lifecycle": {
+            "npc_cad": 1355775.5690301335,
+            "lcoe_cad_per_kwh": 0.605353158662133,
+            "annual_diesel_litres": 28866.949693706625,
+            "annual_co2_kg": 77363.42517913376,
+            "capex_cad": 505725.9200554641
+          }
+        },
+        "2021": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 106043.22092201385,
+            "diesel_litres": 29692.10185816388,
+            "diesel_dump_kwh": 22522.382316858384,
+            "pv_generation_kwh": 134153.40585189278,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 32152.45374761995,
+            "gross_renewable_fraction": 0.765715786825872,
+            "renewable_fraction": 0.5226813039685312,
+            "renewable_delivered_kwh": 91573.76445528667,
+            "battery_storage_loss_kwh": 10421.790709428256,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 79574.8329798792,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 105.39693955787516
+          },
+          "lifecycle": {
+            "npc_cad": 1377926.818436482,
+            "lcoe_cad_per_kwh": 0.6152436811813123,
+            "annual_diesel_litres": 29692.10185816388,
+            "annual_co2_kg": 79574.8329798792,
+            "capex_cad": 505725.9200554641
+          }
+        },
+        "2022": {
+          "metrics": {
+            "total_load_kwh": 175200.0,
+            "unmet_load_kwh": 0.0,
+            "unmet_fraction": 0.0,
+            "diesel_kwh": 103167.6468158882,
+            "diesel_litres": 28886.9411084487,
+            "diesel_dump_kwh": 21510.054007895636,
+            "pv_generation_kwh": 139479.9976520337,
+            "wind_generation_kwh": 0.0,
+            "curtailed_kwh": 35056.70135490026,
+            "gross_renewable_fraction": 0.7961187080595531,
+            "renewable_fraction": 0.5333165874556806,
+            "renewable_delivered_kwh": 93437.06612223524,
+            "battery_storage_loss_kwh": 10980.889105126003,
+            "initial_soc_kwh": 137.49999999999997,
+            "terminal_soc_kwh": 37.5,
+            "co2_kg": 77417.00217064252,
+            "terminal_renewable_soc_kwh": 37.5,
+            "initial_unknown_to_load_kwh": 105.34106977218835
+          },
+          "lifecycle": {
+            "npc_cad": 1356312.2395171202,
+            "lcoe_cad_per_kwh": 0.6055927817840414,
+            "annual_diesel_litres": 28886.9411084487,
+            "annual_co2_kg": 77417.00217064252,
+            "capex_cad": 505725.9200554641
+          }
+        }
+      },
+      "uncertainty": [
+        {
+          "metric": "annual_diesel_litres",
+          "point_estimate": 28974.15039554608,
+          "lower_95": 28743.293665705794,
+          "upper_95": 29340.35400048779,
+          "n_samples": 5
+        },
+        {
+          "metric": "renewable_fraction_pct",
+          "point_estimate": 53.23650537449273,
+          "lower_95": 52.72613262835824,
+          "upper_95": 53.54980291487279,
+          "n_samples": 5
+        },
+        {
+          "metric": "npc_cad",
+          "point_estimate": 1358653.3770093967,
+          "lower_95": 1352456.0170313255,
+          "upper_95": 1368484.1303370611,
+          "n_samples": 5
+        }
+      ],
+      "baselines": {
+        "diesel_only": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.0,
+          "gross_renewable_fraction": 0.0,
+          "diesel_litres": 57483.2191245958,
+          "diesel_dump_kwh": 30097.211159270686,
+          "npc_cad": 1656480.6935477864,
+          "lcoe_cad_per_kwh": 0.7396178563826193,
+          "co2_kg": 154055.02725391675,
+          "composite_score": 0.5
+        },
+        "rule_of_thumb": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.6019317223077811,
+          "gross_renewable_fraction": 1.0322819390249867,
+          "diesel_litres": 23460.730099121447,
+          "diesel_dump_kwh": 14622.623248694985,
+          "npc_cad": 1957545.344880611,
+          "lcoe_cad_per_kwh": 0.8740430826582437,
+          "co2_kg": 62874.75666564548,
+          "composite_score": 0.6867598232164829
+        },
+        "fixed_renewable": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.48022153706362686,
+          "gross_renewable_fraction": 0.6451762118906167,
+          "diesel_litres": 32647.66690375908,
+          "diesel_dump_kwh": 25612.15260499016,
+          "npc_cad": 1363769.1037527043,
+          "lcoe_cad_per_kwh": 0.6089222681841797,
+          "co2_kg": 87495.74730207433,
+          "composite_score": 0.6762265708728757
+        },
+        "optimized": {
+          "unmet_fraction": 0.0,
+          "renewable_fraction": 0.5344721031666795,
+          "gross_renewable_fraction": 0.8064702648632709,
+          "diesel_litres": 28738.523319498625,
+          "diesel_dump_kwh": 21174.81739150348,
+          "npc_cad": 1352327.95685874,
+          "lcoe_cad_per_kwh": 0.6038138014370371,
+          "co2_kg": 77019.24249625632,
+          "composite_score": 0.6950052728805218
+        },
+        "load_statistics": {
+          "annual_kwh": 175200.0,
+          "mean_daily_kwh": 480.0,
+          "peak_kw": 43.438545517572805
+        }
+      },
+      "report_html": "results/report_dease_lake.html"
+    }
+  },
+  "timing": {
+    "iqaluit_weather_fetch_s": 0.07280920899938792,
+    "iqaluit_optimization_s": 166.90187583400257,
+    "iqaluit_total_s": 168.16797137499816,
+    "inuvik_weather_fetch_s": 0.07631658299942501,
+    "inuvik_optimization_s": 169.0441799170003,
+    "inuvik_total_s": 170.2273130829999,
+    "whitehorse_weather_fetch_s": 0.08933929199702106,
+    "whitehorse_optimization_s": 167.5843355420002,
+    "whitehorse_total_s": 168.81367191600293,
+    "dease_lake_weather_fetch_s": 0.08343383400642779,
+    "dease_lake_optimization_s": 168.56573220800055,
+    "dease_lake_total_s": 169.79144691699912,
+    "pipeline_total_s": 677.0004102500025
+  },
+  "run_metadata": {
+    "source_revision": "0e113778a27fb3250249697286fc049536cace39",
+    "source_revision_scope": "checkout HEAD; code_sha256 binds executed source content",
+    "code_sha256": "3f54dd6b48c2ffbf413b71165deb3d57f1a2d2fe5e28b6bd3f9b85ad9f7382bf",
+    "protocol_sha256": "82432dd733fd68e4a2c6878452abe528793171162a978a3d05aff8c1ffd5bd9e",
+    "constraints_sha256": "d392362ce20b0ad6ef2122e38807764f2f070a97e8a794af03b9ce0fe245b747",
+    "cache_sha256": {
+      "data/weather/iqaluit/2018.parquet": "b5c307e11342016a983a10378b1b07aeb754c724d46ec8ce4d6ee9a88478c31a",
+      "data/weather/iqaluit/2019.parquet": "410c5306cd94eee8d3d972e2280a84db643d7b3d0dc48218211a22e0ba448252",
+      "data/weather/iqaluit/2020.parquet": "ece0b94347b9c3dbb0ea72fd74284bdafb345849a936467bc913625c26fa2237",
+      "data/weather/iqaluit/2021.parquet": "ec724cc8b8cad55dcf2a667d2ddac09097f3de17102db735d23a27f990c1184e",
+      "data/weather/iqaluit/2022.parquet": "f6522c6695980bce4dcdb30a10c6d858d006d7208853fb8d9d1c0d6c0fc3dc1b",
+      "data/weather/inuvik/2018.parquet": "4a00f17276c2cb5d3f513a271984d3586d1ac00319abacbfe8fe142ae1bdfc0b",
+      "data/weather/inuvik/2019.parquet": "cf570c13a968dc0b14931f21c3f0ac400b2fa7e0935de112bff42f357b0cc1ef",
+      "data/weather/inuvik/2020.parquet": "fa49daeeba7893653b11f9120941dc39a3679d584d83200c5be1d7db9f9c0339",
+      "data/weather/inuvik/2021.parquet": "e8d67b707baaffd533410f84fb53a5b1214b0751caf7794585c7938ca487090e",
+      "data/weather/inuvik/2022.parquet": "8f0ea931f9c302b4fc3c320a131221c8cf0b6dfd13966f5ad2d191f7373aebee",
+      "data/weather/whitehorse/2018.parquet": "72171770b5a96bdb3ebaf5119b5a2828fc68fdcd0003e45d02ac3828f191c973",
+      "data/weather/whitehorse/2019.parquet": "b37110f3deef591c46f5088881242c45aff366c3d222f1be4c6b3ab05590a409",
+      "data/weather/whitehorse/2020.parquet": "74eebc3ab9f41ff48f08ce013efeddc204d9a81322c2f789991d236dafaf9877",
+      "data/weather/whitehorse/2021.parquet": "9de3a61d518fb68cd233e0deb58bb6bead939d816de53b688add4ec4b675f4dc",
+      "data/weather/whitehorse/2022.parquet": "e02f69406bd29d101b7fcab6289538a62f8afc80db9986366a60784cef92b34e",
+      "data/weather/dease_lake/2018.parquet": "ef65ea45f6294a5307204aa021cb28136bddbb2ba4fc826b397443de9538d129",
+      "data/weather/dease_lake/2019.parquet": "568d73f10082760c65809dce3860c263ea66a2e81c6532a732ba024706a89774",
+      "data/weather/dease_lake/2020.parquet": "2dbadf9b9171694fb6dbdd10fbfcbf267cd8d44b327657e44ad71018ae7bfda3",
+      "data/weather/dease_lake/2021.parquet": "5898031cbfe84da1ae4ca34a440ff6c443147d25e0f637facca9431bc1952c2d",
+      "data/weather/dease_lake/2022.parquet": "cdc3cf75184388cb2c56bfcf29bf09528ecf016735c22138f6f9ee5476421786"
+    },
+    "dependencies": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.6",
+      "pyarrow": "25.0.1",
+      "requests": "2.34.2",
+      "scipy": "1.17.1",
+      "matplotlib": "3.11.2",
+      "jinja2": "3.1.6",
+      "pyyaml": "6.0.3",
+      "click": "8.5.0"
+    },
+    "python": "3.11.14",
+    "search_constraints": {
+      "max_unmet_fraction": 0.01,
+      "pv_kw_range": [
+        0.0,
+        200.0,
+        10.0
+      ],
+      "wind_kw_range": [
+        0.0,
+        100.0,
+        10.0
+      ],
+      "battery_kwh_range": [
+        0.0,
+        500.0,
+        25.0
+      ],
+      "battery_power_ratio": 0.5
+    },
+    "bootstrap": {
+      "resamples": 1000,
+      "seed": 42,
+      "estimand": "weather-year mean"
+    },
+    "boundary_policy": "midpoint unknown-source initial SOC; unconstrained terminal SOC",
+    "protocol_chronology": "unverified",
+    "memory_abort_rule": "not enforced"
+  }
+}

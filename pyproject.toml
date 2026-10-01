@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling==1.32.4", "editables==0.6"]
+build-backend = "hatchling.build"
+
+[project]
+name = "northern-microgrid"
+version = "0.1.0"
+description = "Off-grid PV, wind, battery and diesel sizing for Canadian northern and remote sites"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+authors = [{ name = "Amirhossein Daneshpajouh" }]
+keywords = ["microgrid", "off-grid", "solar", "wind", "battery", "arctic", "canada"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "pyarrow>=14.0",
+    "requests>=2.31",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "jinja2>=3.1",
+    "pyyaml>=6.0",
+    "click>=8.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+    "mypy>=1.8",
+    "pyright>=1.1",
+    "types-PyYAML",
+    "types-requests",
+    "pandas-stubs",
+]
+
+[project.scripts]
+northern-microgrid = "northern_microgrid.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/northern_microgrid"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["northern_microgrid"]
+mypy_path = "src"
+
+[tool.pyright]
+include = ["src"]
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests that fetch network data or run long simulations",
+]
+
+[tool.coverage.run]
+source = ["northern_microgrid"]
+branch = true
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true

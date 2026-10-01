@@ -1,0 +1,1 @@
+Scorer validation passed: perfect=1.0, empty=0.0

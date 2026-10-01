@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: northern-microgrid
+message: "If you use this software, please cite it as below. Code: Apache-2.0. Documentation and generated outputs: CC BY 4.0; scope in docs/LICENSING.md."
+authors:
+  - family-names: Daneshpajouh
+    given-names: Amirhossein
+    affiliation: VoyaX Labs
+version: 0.1.0
+date-released: 2026-10-01
+license: Apache-2.0
+repository-code: https://github.com/voyaxlabs/northern-microgrid
+keywords:
+  - microgrid
+  - off-grid
+  - solar
+  - arctic
+  - canada

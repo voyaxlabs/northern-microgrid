@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: |
+          pip install -c constraints.txt hatchling editables build
+          pip install --no-build-isolation -c constraints.txt -e ".[dev]"
+      - name: Ruff
+        run: ruff check src tests
+      - name: Mypy
+        run: mypy src
+      - name: Pyright
+        run: pyright src
+      - name: Tests
+        run: pytest tests/ -q --cov=northern_microgrid --cov-fail-under=90
+      - name: Build wheel
+        run: python -m build --no-isolation
+      - name: Regenerate and compare all sites (cached weather)
+        run: |
+          cp results/evaluation_results.json /tmp/expected.json
+          northern-microgrid run --root . --no-fetch
+          python scripts/compare_results.py /tmp/expected.json results/evaluation_results.json
+      - name: Validate scorers
+        run: northern-microgrid validate-scorers

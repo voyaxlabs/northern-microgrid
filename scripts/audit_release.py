@@ -2,7 +2,13 @@
 
 import re
 import subprocess
+import sys
+import tarfile
+from io import BytesIO
 from pathlib import Path
+
+import pyarrow.parquet as pq
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 PATTERNS = {
@@ -16,41 +22,63 @@ PATTERNS = {
         bytes.fromhex("e28094") + b"|" + b"&" + b"mdash;" + b"|" + b"&#" + b"8212;"
     ),
     "private-key": re.compile(rb"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----"),
+    "access-token": re.compile(rb"(?:gh[pousr]_[A-Za-z0-9]{30,}|AKIA[A-Z0-9]{16})"),
 }
+
+FORBIDDEN = [
+    ".review/", ".venv/", "__pycache__/", ".coverage", ".pytest_cache/",
+    ".mypy_cache/", ".ruff_cache/", ".git/", ".bundle",
+]
 
 
 def git(*args):
     return subprocess.check_output(["git", "-C", str(ROOT), *args])
 
 
+def scan_bytes(name, data):
+    for label, pattern in PATTERNS.items():
+        assert not pattern.search(data), f"{label}: {name}"
+
+
+def scan_file(name, data):
+    assert not any(x in name for x in FORBIDDEN), f"Forbidden payload path: {name}"
+    scan_bytes(name, data)
+    if name.endswith(".png"):
+        with Image.open(BytesIO(data)) as img:
+            scan_bytes(name + " metadata", repr(img.info).encode())
+    if name.endswith(".parquet"):
+        table = pq.read_table(BytesIO(data))
+        scan_bytes(name + " schema/metadata", str(table.schema).encode())
+        # Inspect decoded values too; compression must not hide string metadata.
+        for column in table.columns:
+            if str(column.type) in {"string", "large_string", "binary", "large_binary"}:
+                scan_bytes(name + " decoded column", repr(column.to_pylist()).encode())
+
+
 def main():
     paths = git("ls-files", "-z").decode().split("\0")[:-1]
     assert paths
-    forbidden = [
-        ".review/",
-        ".venv/",
-        "__pycache__/",
-        ".coverage",
-        ".pytest_cache/",
-        ".mypy_cache/",
-        ".ruff_cache/",
-    ]
     for name in paths:
-        assert not any(x in name for x in forbidden), f"Forbidden payload path: {name}"
-        data = (ROOT / name).read_bytes()
-        for label, pattern in PATTERNS.items():
-            assert not pattern.search(data), f"{label}: {name}"
+        scan_file(name, (ROOT / name).read_bytes())
     objects = git("rev-list", "--objects", "--all").decode().splitlines()
     for obj in objects:
         oid = obj.split()[0]
         kind = git("cat-file", "-t", oid).decode().strip()
         if kind in {"blob", "commit", "tag"}:
             data = git("cat-file", "-p", oid)
-            for label, pattern in PATTERNS.items():
-                assert not pattern.search(data), f"{label}: historical object {oid}"
+            scan_bytes(f"historical object {oid}", data)
+    archive_count = 0
+    if len(sys.argv) > 1:
+        with tarfile.open(sys.argv[1]) as archive:
+            for member in archive.getmembers():
+                if member.isfile():
+                    scan_file(member.name, archive.extractfile(member).read())
+                    archive_count += 1
+        assert archive_count == len(paths), "Release archive file count differs from Git payload"
     print(
         f"PASS: {len(paths)} tracked files and {len(objects)} reachable objects; "
-        "bounded path/attribution/punctuation/key scan. Public author credits retained."
+        f"{archive_count} archive files; bounded path/attribution/punctuation/key/token scan "
+        "including PNG and Parquet metadata/strings. Public author credits retained."
     )
 
 

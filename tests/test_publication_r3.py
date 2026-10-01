@@ -173,6 +173,13 @@ def test_f09_metadata_binds_actual_protocol_and_inputs() -> None:
     )
     assert len(metadata["cache_sha256"]) == 20
     assert metadata["code_sha256"] and metadata["dependencies"] and metadata["search_constraints"]
+    code_hash = hashlib.sha256()
+    for path in sorted((ROOT / "src").rglob("*.py")):
+        code_hash.update(str(path.relative_to(ROOT)).encode())
+        code_hash.update(path.read_bytes())
+    assert metadata["code_sha256"] == code_hash.hexdigest()
+    for name, expected_hash in metadata["cache_sha256"].items():
+        assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == expected_hash
     assert "pre-result chronology is unverified" in (ROOT / "docs/PREREGISTRATION.md").read_text()
     assert (ROOT / "docs/PROTOCOL_DEVIATIONS.md").exists()
 

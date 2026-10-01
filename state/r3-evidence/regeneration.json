@@ -1,0 +1,241 @@
+{
+  "command": "northern-microgrid run --root .",
+  "initial_git_status_porcelain": "empty",
+  "source_revision": "0afeb9ccd3a8b84cdc9717afa1b8f4ff10b73ce3",
+  "code_sha256": "52356b481c6e08523d455e241cb6ae5ebd51f760fb63052c6619a8973d98a161",
+  "protocol_sha256": "7bdd8d637841c2e15c80053c29ebe067995ecb77143c81036e3190b71f5dfc99",
+  "python": "3.11.14",
+  "runtime_s": 677.6856861669949,
+  "comparison": "PASS: scientific values and input/code/config hashes match (rtol=1e-9, atol=1e-6); timing/revision/environment receipts excluded",
+  "compared_scientific_numeric_values": 949,
+  "compared_scientific_scalars": 975,
+  "artifacts": [
+    {
+      "path": "results/evaluation_results.json",
+      "sha256": "174f323eb17643a10da485ae6cc60a4e915c0b3e75741ea8a477d7c57c8df740",
+      "same_as_prior": false
+    },
+    {
+      "path": "results/figures/dease_lake_baseline_npc.png",
+      "sha256": "b01284fb2abfb6233ca81f6508145d941b3ad06ec4eb6b2f406da5747dff048d",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/figures/dease_lake_monthly_balance.png",
+      "sha256": "60d8ed11a561cbe06ddf7858ed9f123dcd9d1d06280fbd93c5e020f58516b3d3",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/figures/inuvik_baseline_npc.png",
+      "sha256": "6c9596c4352f03b5181d562a348a9b8da6d404bb3b7c8764cc78faf30df26bbf",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/figures/inuvik_monthly_balance.png",
+      "sha256": "360460f98bb445ddf362a08b0a7de5b04816749f26b404d837a394fd1b70a86c",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/figures/iqaluit_baseline_npc.png",
+      "sha256": "5e95b1be0b0f1fa814757ade7203edde7893a638a0831b6416814145ced6ad77",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/figures/iqaluit_monthly_balance.png",
+      "sha256": "6b5057c150d3566c5624b75f392e9a8b89734d81d0c0c7e45adcf704e883d8e4",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/figures/whitehorse_baseline_npc.png",
+      "sha256": "54d39236e44458831cf0863f0ee4aa0f88421e7c2fb9bbc910040d51fc5c8c10",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/figures/whitehorse_monthly_balance.png",
+      "sha256": "c2ed98d3ced6ba39d4dcb819c300019577f198e168b5d6c45a424cb7f8501122",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/report_dease_lake.html",
+      "sha256": "9fe8c22b04305d29fab475103a3c0a5e35f570a26ca59b64666e8d7aca4ab1e1",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/report_inuvik.html",
+      "sha256": "a3476eec8b45b5be4ca6d70bbf537a08f7dcb4bdff538af981d8b65bdc411c49",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/report_iqaluit.html",
+      "sha256": "b35d751ab822d276cd2ed98ef010d7030bb38b27972df97cce720969214bbb6f",
+      "same_as_prior": true
+    },
+    {
+      "path": "results/report_whitehorse.html",
+      "sha256": "040b00d356d341e93caf3541b6ed1ae2a273fbebbf1ee5af5b0cbd20769a9392",
+      "same_as_prior": true
+    }
+  ],
+  "annual_energy_ledgers": [
+    {
+      "site": "iqaluit",
+      "year": "2018",
+      "residual_kwh": 0.0,
+      "unknown_initial_to_load_kwh": 94.53360021861954,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "iqaluit",
+      "year": "2019",
+      "residual_kwh": -5.820766091346741e-11,
+      "unknown_initial_to_load_kwh": 96.79581621351826,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "iqaluit",
+      "year": "2020",
+      "residual_kwh": 0.0,
+      "unknown_initial_to_load_kwh": 95.66644834361432,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "iqaluit",
+      "year": "2021",
+      "residual_kwh": -2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 97.77364940974076,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "iqaluit",
+      "year": "2022",
+      "residual_kwh": 2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 98.89587511267746,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "inuvik",
+      "year": "2018",
+      "residual_kwh": 2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 90.56917280024572,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "inuvik",
+      "year": "2019",
+      "residual_kwh": 2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 96.79741122226551,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "inuvik",
+      "year": "2020",
+      "residual_kwh": 0.0,
+      "unknown_initial_to_load_kwh": 87.83588627004428,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "inuvik",
+      "year": "2021",
+      "residual_kwh": 2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 86.82317701673674,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "inuvik",
+      "year": "2022",
+      "residual_kwh": 2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 85.13050526996085,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "whitehorse",
+      "year": "2018",
+      "residual_kwh": 5.820766091346741e-11,
+      "unknown_initial_to_load_kwh": 90.28579522494692,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "whitehorse",
+      "year": "2019",
+      "residual_kwh": -2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 97.29420700502305,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "whitehorse",
+      "year": "2020",
+      "residual_kwh": 2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 97.25804562379199,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "whitehorse",
+      "year": "2021",
+      "residual_kwh": 0.0,
+      "unknown_initial_to_load_kwh": 93.90077922128694,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "whitehorse",
+      "year": "2022",
+      "residual_kwh": 0.0,
+      "unknown_initial_to_load_kwh": 94.64907071072594,
+      "initial_soc_kwh": 123.74999999999999,
+      "terminal_soc_kwh": 33.75
+    },
+    {
+      "site": "dease_lake",
+      "year": "2018",
+      "residual_kwh": 2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 97.72163277759682,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "dease_lake",
+      "year": "2019",
+      "residual_kwh": 0.0,
+      "unknown_initial_to_load_kwh": 108.5507988798272,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "dease_lake",
+      "year": "2020",
+      "residual_kwh": 0.0,
+      "unknown_initial_to_load_kwh": 109.52146486705897,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "dease_lake",
+      "year": "2021",
+      "residual_kwh": 2.9103830456733704e-11,
+      "unknown_initial_to_load_kwh": 105.39693955787516,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    },
+    {
+      "site": "dease_lake",
+      "year": "2022",
+      "residual_kwh": 0.0,
+      "unknown_initial_to_load_kwh": 105.34106977218835,
+      "initial_soc_kwh": 137.49999999999997,
+      "terminal_soc_kwh": 37.5
+    }
+  ]
+}

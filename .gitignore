@@ -12,4 +12,5 @@ build/
 .DS_Store
 .review/
 state/*.bundle
+state/*.bundle.sha256
 state/publication/

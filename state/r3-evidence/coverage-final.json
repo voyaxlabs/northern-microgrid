@@ -1,0 +1,40 @@
+{
+  "311": {
+    "python": "3.11.14",
+    "totals": {
+      "covered_lines": 1077,
+      "num_statements": 1139,
+      "percent_covered": 92.75786393562545,
+      "percent_covered_display": "93",
+      "missing_lines": 62,
+      "excluded_lines": 2,
+      "percent_statements_covered": 94.5566286215979,
+      "percent_statements_covered_display": "95",
+      "num_branches": 228,
+      "num_partial_branches": 29,
+      "covered_branches": 191,
+      "missing_branches": 37,
+      "percent_branches_covered": 83.7719298245614,
+      "percent_branches_covered_display": "84"
+    }
+  },
+  "312": {
+    "python": "3.12.12",
+    "totals": {
+      "covered_lines": 1077,
+      "num_statements": 1139,
+      "percent_covered": 92.75786393562545,
+      "percent_covered_display": "93",
+      "missing_lines": 62,
+      "excluded_lines": 2,
+      "percent_statements_covered": 94.5566286215979,
+      "percent_statements_covered_display": "95",
+      "num_branches": 228,
+      "num_partial_branches": 29,
+      "covered_branches": 191,
+      "missing_branches": 37,
+      "percent_branches_covered": 83.7719298245614,
+      "percent_branches_covered_display": "84"
+    }
+  }
+}

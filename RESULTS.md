@@ -3,12 +3,13 @@
 Simulation-only scenario results from `results/evaluation_results.json`. Grid-optimal under the recorded search, dispatch and fixed diesel sizing; no external validation.
 
 ```bash
-pip install -c constraints.txt -e ".[dev]"
+pip install -c constraints.txt hatchling editables build
+pip install --no-build-isolation -c constraints.txt -e ".[dev]"
 northern-microgrid run --root .
 ```
 
-**Preserved protocol SHA-256:** `82432dd733fd68e4a2c6878452abe528793171162a978a3d05aff8c1ffd5bd9e` (chronology unverified)
-**Pipeline runtime (this run):** 677.0 s
+**Preserved protocol SHA-256:** `7bdd8d637841c2e15c80053c29ebe067995ecb77143c81036e3190b71f5dfc99` (chronology unverified)
+**Pipeline runtime (this run):** 677.7 s
 
 ## Configuration
 
@@ -39,7 +40,7 @@ Reliability constraint <= 1.000%: met; maximum unmet across all evaluated site-y
 | Whitehorse | 175200 | 480.0 | 43.44 | 1656481 |
 | Dease Lake | 175200 | 480.0 | 43.44 | 1656481 |
 
-## NPC bootstrap intervals (95%, five-year mean for the default run)
+## NPC bootstrap intervals (95%, mean of 5 evaluated weather years)
 
 | Site | Mean CAD | Lower CAD | Upper CAD | Width % | Years |
 |---|---:|---:|---:|---:|---:|
@@ -50,7 +51,7 @@ Reliability constraint <= 1.000%: met; maximum unmet across all evaluated site-y
 
 ## Hypothesis outcomes
 
-- H1 (>=15% NPC savings and reliability constraint): met at 2 of 4 evaluated sites: Whitehorse, Dease Lake.
+- H1 (>=15% NPC savings and <1% unmet in every evaluated year): met at 2 of 4 evaluated sites: Whitehorse, Dease Lake.
   Savings by site: Iqaluit: 11.0%; Inuvik: 12.6%; Whitehorse: 17.7%; Dease Lake: 18.4%.
 - H2 (>10% NPC CI width at evaluated Arctic sites): not met; Iqaluit: 1.93%; Inuvik: 1.13%.
 - H3: untested; no matched measured load/weather validation experiment.
@@ -128,8 +129,8 @@ One assumption changes at a time; capacities are not re-optimized. Fuel +/-25%; 
 | Step | Iqaluit | Inuvik | Whitehorse | Dease Lake |
 |---|---:|---:|---:|---:|
 | Cached weather check | 0.1 | 0.1 | 0.1 | 0.1 |
-| Optimization | 166.9 | 169.0 | 167.6 | 168.6 |
-| Site total | 168.2 | 170.2 | 168.8 | 169.8 |
+| Optimization | 167.1 | 167.8 | 169.2 | 168.7 |
+| Site total | 168.4 | 169.0 | 170.4 | 169.9 |
 
 ## Limitations
 

@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "command": "northern-microgrid run --root .",
+  "initial_git_status": "empty",
+  "verification_revision": "c5debcdad9ed73295af140a43cfedae145c15aa7",
+  "sites": [
+    "iqaluit",
+    "inuvik",
+    "whitehorse",
+    "dease_lake"
+  ],
+  "weather_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "total_design_evaluations": 19404,
+  "pipeline_seconds": 682.3836113330035,
+  "comparison": "All experiment scalars match exactly. Committed comparator passes at rtol=1e-9/atol=1e-6 after explicitly replacing the old code hash with the independently calculated acquisition-only source hash. No other comparison policy change.",
+  "counts": {
+    "experiment_scalars": 975,
+    "experiment_numeric_values": 949
+  },
+  "r3_code_sha256": "52356b481c6e08523d455e241cb6ae5ebd51f760fb63052c6619a8973d98a161",
+  "r4_code_sha256": "e68c1503e8e41e1d8bb60c0e470c445ada5197e644f6d7002cda9b5c69af6ad2",
+  "unchanged_png_html_files": [
+    "results/figures/dease_lake_baseline_npc.png",
+    "results/figures/dease_lake_monthly_balance.png",
+    "results/figures/inuvik_baseline_npc.png",
+    "results/figures/inuvik_monthly_balance.png",
+    "results/figures/iqaluit_baseline_npc.png",
+    "results/figures/iqaluit_monthly_balance.png",
+    "results/figures/whitehorse_baseline_npc.png",
+    "results/figures/whitehorse_monthly_balance.png",
+    "results/report_dease_lake.html",
+    "results/report_inuvik.html",
+    "results/report_iqaluit.html",
+    "results/report_whitehorse.html"
+  ],
+  "results_markdown": "Identical apart from runtime headline/table",
+  "network_acquisition": "Not needed in full default run; CLI recovery tested with fake NASA chunk source."
+}

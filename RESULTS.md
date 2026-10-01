@@ -9,7 +9,7 @@ northern-microgrid run --root .
 ```
 
 **Preserved protocol SHA-256:** `7bdd8d637841c2e15c80053c29ebe067995ecb77143c81036e3190b71f5dfc99` (chronology unverified)
-**Pipeline runtime (this run):** 677.7 s
+**Pipeline runtime (this run):** 682.4 s
 
 ## Configuration
 
@@ -129,8 +129,8 @@ One assumption changes at a time; capacities are not re-optimized. Fuel +/-25%; 
 | Step | Iqaluit | Inuvik | Whitehorse | Dease Lake |
 |---|---:|---:|---:|---:|
 | Cached weather check | 0.1 | 0.1 | 0.1 | 0.1 |
-| Optimization | 167.1 | 167.8 | 169.2 | 168.7 |
-| Site total | 168.4 | 169.0 | 170.4 | 169.9 |
+| Optimization | 167.9 | 171.7 | 168.8 | 167.1 |
+| Site total | 170.3 | 172.9 | 170.1 | 168.3 |
 
 ## Limitations
 

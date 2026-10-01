@@ -1,0 +1,71 @@
+WARNING: The directory '<home>/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Looking in links: <local-wheelhouse>
+Processing <local-wheelhouse>/hatchling-1.32.4-py3-none-any.whl
+Processing <local-wheelhouse>/editables-0.6-py3-none-any.whl
+Processing <local-wheelhouse>/build-1.6.1-py3-none-any.whl
+Processing <local-wheelhouse>/packaging-26.3-py3-none-any.whl (from hatchling)
+Processing <local-wheelhouse>/pathspec-1.1.1-py3-none-any.whl (from hatchling)
+Processing <local-wheelhouse>/pluggy-1.6.0-py3-none-any.whl (from hatchling)
+Processing <local-wheelhouse>/tomlkit-0.15.1-py3-none-any.whl (from hatchling)
+Processing <local-wheelhouse>/trove_classifiers-2026.9.21.13-py3-none-any.whl (from hatchling)
+Processing <local-wheelhouse>/pyproject_hooks-1.3.3-py3-none-any.whl (from build)
+Installing collected packages: trove-classifiers, tomlkit, pyproject_hooks, pluggy, pathspec, packaging, editables, hatchling, build
+
+Successfully installed build-1.6.1 editables-0.6 hatchling-1.32.4 packaging-26.3 pathspec-1.1.1 pluggy-1.6.0 pyproject_hooks-1.3.3 tomlkit-0.15.1 trove-classifiers-2026.9.21.13
+WARNING: The directory '<home>/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Looking in links: <local-wheelhouse>
+Obtaining file://<isolated-verification>/checkout
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Processing <local-wheelhouse>/click-8.5.0-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/Jinja2-3.1.6-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/matplotlib-3.11.2-cp311-cp311-macosx_11_0_arm64.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/numpy-2.4.6-cp311-cp311-macosx_14_0_arm64.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/pandas-3.0.6-cp311-cp311-macosx_11_0_arm64.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/pyarrow-25.0.1-cp311-cp311-macosx_12_0_arm64.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/PyYAML-6.0.3-cp311-cp311-macosx_11_0_arm64.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/requests-2.34.2-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/scipy-1.17.1-cp311-cp311-macosx_14_0_arm64.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/mypy-2.3.1-cp311-cp311-macosx_11_0_arm64.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/pandas_stubs-3.0.5.260914-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/pyright-1.1.414-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/pytest_cov-7.1.0-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/pytest-9.1.1-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/ruff-0.16.9-py3-none-macosx_11_0_arm64.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/types_PyYAML-6.0.12.20260906-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/types_requests-2.33.0.20260906-py3-none-any.whl (from northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/MarkupSafe-3.0.3-cp311-cp311-macosx_11_0_arm64.whl (from jinja2>=3.1->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/contourpy-1.3.3-cp311-cp311-macosx_11_0_arm64.whl (from matplotlib>=3.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/cycler-0.12.1-py3-none-any.whl (from matplotlib>=3.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/fonttools-4.66.1-cp311-cp311-macosx_10_9_universal2.whl (from matplotlib>=3.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/kiwisolver-1.5.1-cp311-cp311-macosx_11_0_arm64.whl (from matplotlib>=3.8->northern-microgrid==0.1.0)
+Requirement already satisfied: packaging>=20.0 in <isolated-verification>/env311/lib/python3.11/site-packages (from matplotlib>=3.8->northern-microgrid==0.1.0) (26.3)
+Processing <local-wheelhouse>/pillow-12.3.0-cp311-cp311-macosx_11_0_arm64.whl (from matplotlib>=3.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/pyparsing-3.3.3-py3-none-any.whl (from matplotlib>=3.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/python_dateutil-2.9.0.post0-py2.py3-none-any.whl (from matplotlib>=3.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/typing_extensions-4.16.0-py3-none-any.whl (from mypy>=1.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/mypy_extensions-1.1.0-py3-none-any.whl (from mypy>=1.8->northern-microgrid==0.1.0)
+Requirement already satisfied: pathspec>=1.0.0 in <isolated-verification>/env311/lib/python3.11/site-packages (from mypy>=1.8->northern-microgrid==0.1.0) (1.1.1)
+Processing <local-wheelhouse>/librt-0.16.0-cp311-cp311-macosx_11_0_arm64.whl (from mypy>=1.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/ast_serialize-0.11.2-cp39-abi3-macosx_11_0_arm64.whl (from mypy>=1.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/nodeenv-1.11.0-py2.py3-none-any.whl (from pyright>=1.1->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/iniconfig-2.3.0-py3-none-any.whl (from pytest>=7.4->northern-microgrid==0.1.0)
+Requirement already satisfied: pluggy<2,>=1.5 in <isolated-verification>/env311/lib/python3.11/site-packages (from pytest>=7.4->northern-microgrid==0.1.0) (1.6.0)
+Processing <local-wheelhouse>/Pygments-2.21.0-py3-none-any.whl (from pytest>=7.4->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/coverage-7.16.2-cp311-cp311-macosx_11_0_arm64.whl (from coverage[toml]>=7.10.6->pytest-cov>=4.1->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/six-1.17.0-py2.py3-none-any.whl (from python-dateutil>=2.7->matplotlib>=3.8->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/charset_normalizer-3.5.2-cp311-cp311-macosx_10_9_universal2.whl (from requests>=2.31->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/idna-3.20-py3-none-any.whl (from requests>=2.31->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/urllib3-2.8.0-py3-none-any.whl (from requests>=2.31->northern-microgrid==0.1.0)
+Processing <local-wheelhouse>/certifi-2026.7.22-py3-none-any.whl (from requests>=2.31->northern-microgrid==0.1.0)
+Building wheels for collected packages: northern-microgrid
+  Building editable for northern-microgrid (pyproject.toml): started
+  Building editable for northern-microgrid (pyproject.toml): finished with status 'done'
+  Created wheel for northern-microgrid: filename=northern_microgrid-0.1.0-py3-none-any.whl size=8415 sha256=c1f460a4fb8955350e17a8c28b1dbff60fc716dd0763ce35f5fc989a8b4a8af8
+  Stored in directory: /private/var/folders/kd/qd262f_j37xd6gc0cs67rmt80000gn/T/pip-ephem-wheel-cache-hcyg6ziy/wheels/b2/f1/db/da0195117d794b292309bc36aed29f212a27eeea1ba694f7a0
+Successfully built northern-microgrid
+Installing collected packages: urllib3, typing_extensions, types-pyyaml, six, ruff, pyyaml, pyparsing, pygments, pyarrow, pillow, numpy, nodeenv, mypy_extensions, MarkupSafe, librt, kiwisolver, iniconfig, idna, fonttools, cycler, coverage, click, charset_normalizer, certifi, ast-serialize, types-requests, scipy, requests, python-dateutil, pytest, pyright, pandas-stubs, mypy, jinja2, contourpy, pytest-cov, pandas, matplotlib, northern-microgrid
+
+Successfully installed MarkupSafe-3.0.3 ast-serialize-0.11.2 certifi-2026.7.22 charset_normalizer-3.5.2 click-8.5.0 contourpy-1.3.3 coverage-7.16.2 cycler-0.12.1 fonttools-4.66.1 idna-3.20 iniconfig-2.3.0 jinja2-3.1.6 kiwisolver-1.5.1 librt-0.16.0 matplotlib-3.11.2 mypy-2.3.1 mypy_extensions-1.1.0 nodeenv-1.11.0 northern-microgrid-0.1.0 numpy-2.4.6 pandas-3.0.6 pandas-stubs-3.0.5.260914 pillow-12.3.0 pyarrow-25.0.1 pygments-2.21.0 pyparsing-3.3.3 pyright-1.1.414 pytest-9.1.1 pytest-cov-7.1.0 python-dateutil-2.9.0.post0 pyyaml-6.0.3 requests-2.34.2 ruff-0.16.9 scipy-1.17.1 six-1.17.0 types-pyyaml-6.0.12.20260906 types-requests-2.33.0.20260906 typing_extensions-4.16.0 urllib3-2.8.0

@@ -1,0 +1,10 @@
+COMMAND: northern-microgrid run --root .
+Clean initial Git status: empty
+Verification revision: c5debcdad9ed73295af140a43cfedae145c15aa7
+Matplotlib is building the font cache; this may take a moment.
+Pipeline complete. Results: results/evaluation_results.json
+Results summary: <isolated-verification>/checkout/RESULTS.md
+Sites evaluated: iqaluit, inuvik, whitehorse, dease_lake
+Exit: 0
+Elapsed seconds: 700.658837
+Comparison: PASS; experiment values exact, 12 PNG/HTML files byte-identical.

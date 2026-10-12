@@ -1,6 +1,6 @@
 # Bounded workflow contribution and prior art
 
-Revision-to-repository mappings and READMEs were fetched again through the GitHub API on 2026-10-01. The review's abbreviated revision-to-tool mapping was transposed; the table below uses the verified mapping. This is a bounded README capability comparison, not an exhaustive source audit or execution of these tools. Content hashes and retrieval URLs are in [the inspection receipt](../state/r3-evidence/prior-art.json).
+Revision-to-repository mappings and READMEs were fetched again through the GitHub API on 2026-10-01. This is a bounded README capability comparison, not an exhaustive source audit or execution of these tools. Content hashes and retrieval URLs are in [the inspection receipt](prior-art.json).
 
 | Tool / inspected revision | Capability evidence | Comparison boundary |
 |---|---|---|

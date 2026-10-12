@@ -1,2 +1,0 @@
-COMMAND: .venv/bin/ruff check --no-cache src tests scripts
-All checks passed!

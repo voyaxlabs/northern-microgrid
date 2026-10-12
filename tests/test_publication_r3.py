@@ -206,7 +206,7 @@ def test_f11_reject_incomplete_or_wrong_calendar(damage: str) -> None:
 
 def test_f12_public_author_exception_and_payload_exclusions() -> None:
     text = (ROOT / "docs/LICENSING.md").read_text()
-    assert "Public author credit is intentionally retained" in text
+    assert "The author is credited by name in the citation file and the technical report." in text
     ignore = (ROOT / ".gitignore").read_text()
     assert ".review/" in ignore and "state/*.bundle" in ignore
     assert (ROOT / "scripts/audit_release.py").exists()

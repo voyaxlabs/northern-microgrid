@@ -1,5 +1,0 @@
-Publication snapshot before this audit receipt: eb1a732041bf0ea31c050df1ba25cb85ddf81f97
-COMMAND: python scripts/audit_release.py <git-archive.tar>
-PASS: 129 tracked files and 164 reachable objects; 129 archive files; bounded path/attribution/punctuation/key/token scan including PNG and Parquet metadata/strings. Public author credits retained.
-PASS: sdist and wheel payload scans: {"northern_microgrid-0.1.0-py3-none-any.whl": 24, "northern_microgrid-0.1.0.tar.gz": 130}
-The final delivery is scanned again after adding this receipt, and then cloned from the bundle. The sibling ignored state/r3.bundle.sha256 records that final seal; no self-referential commit ID is claimed here.

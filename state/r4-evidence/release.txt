@@ -1,5 +1,0 @@
-PASS: 143 tracked files and 204 reachable objects; 143 archive files; bounded path/attribution/punctuation/key/token scan including PNG and Parquet metadata/strings. Public author credits retained.
-PASS: built sdist/wheel scanned with the same bounded patterns and decoded-content checks.
-Package file counts: {"northern_microgrid-0.1.0-py3-none-any.whl": 24, "northern_microgrid-0.1.0.tar.gz": 144}
-Publication branch extends only the clean publication-r3 ancestry; original development history excluded.
-Both author and committer use the requested public scientific identity; no attribution trailers.

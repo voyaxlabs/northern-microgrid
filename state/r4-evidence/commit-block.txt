@@ -1,4 +1,0 @@
-COMMAND: git add -- <explicit round-four paths>
-Exit: 128
-fatal: Unable to create <original-checkout>/.git/index.lock: Operation not permitted
-Fallback: commits in a separate clean publication repository; state/r4.bundle contains main and publication-r4. Original Git history/index preserved.

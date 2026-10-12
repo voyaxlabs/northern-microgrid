@@ -1,2 +1,0 @@
-COMMAND: <isolated-verification>/env311/bin/mypy src --cache-dir <isolated-verification>/mypy-final
-Success: no issues found in 18 source files

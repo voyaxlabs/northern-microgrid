@@ -6,7 +6,7 @@
 
 ## Abstract
 
-We present an open-source tool for sizing off-grid photovoltaic, wind, battery and diesel hybrid systems at Canadian northern and remote sites. The package simulates 8760-hour dispatch with temperature-dependent PV performance, a snow-cover derating model, cold-penalized battery one-way efficiencies, and multi-year weather uncertainty from NASA POWER. We evaluate four sites (Iqaluit, Inuvik, Whitehorse, Dease Lake) against diesel-only and rule-of-thumb baselines. Optimized designs reduce net present cost by 11.0-18.4% versus diesel-only under a constant-year simplified economic scenario while maintaining zero unmet load for a synthetic remote camp archetype.
+We present an open-source tool for sizing off-grid photovoltaic, wind, battery and diesel hybrid systems at Canadian northern and remote sites. The package simulates 8760-hour dispatch with temperature-dependent PV performance, a snow-cover derating model, cold-penalized battery one-way efficiencies, and multi-year weather uncertainty from NASA POWER. We evaluate four sites (Iqaluit, Inuvik, Whitehorse, Dease Lake) against diesel-only and rule-of-thumb baselines. In simulation, optimized designs reduce net present cost by 11.0-18.4% versus diesel-only under a constant-year simplified economic scenario while maintaining zero unmet load for a synthetic remote camp archetype.
 
 ## 1. Introduction
 

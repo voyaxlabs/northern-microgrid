@@ -1,6 +1,6 @@
 # Evaluation protocol departures, 2026-10-01
 
-The preserved protocol is a benchmark specification, not independently timestamped preregistration. Its original text is kept in the Git baseline and the local review evidence. The current corrected protocol is content-hashed; a hash establishes integrity, not chronology.
+The preserved protocol is a benchmark specification, not independently timestamped preregistration. Its original text is kept in the Git history. The current corrected protocol is content-hashed; a hash establishes integrity, not chronology.
 
 | Item | Earlier statement | Current implementation and claim |
 |---|---|---|

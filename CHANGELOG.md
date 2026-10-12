@@ -6,4 +6,4 @@
 - NASA POWER weather fetch and cache
 - Grid-search sizing with three baselines
 - Four Canadian northern case studies
-- HTML engineer reports and evaluation pipeline
+- HTML scenario reports and evaluation pipeline

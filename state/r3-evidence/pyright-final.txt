@@ -1,2 +1,0 @@
-COMMAND: <isolated-verification>/env311/bin/pyright src
-0 errors, 0 warnings, 0 informations

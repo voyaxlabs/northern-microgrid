@@ -13,4 +13,4 @@ The author is credited by name in the citation file and the technical report.
 
 The NASA [registry entry](https://registry.opendata.aws/nasa-power/) declares CC BY 4.0. Weather redistribution includes attribution, licence and changes; no endorsement is implied. Literature facts are cited with source links in RESULTS; no paper PDFs, article figures, restricted monitored loads, client records or third-party source code are shipped. Costs, analytic loads and efficiency coefficients are original stipulated scenario assumptions. NREL ATB and northern papers provide context, not a documented numerical extraction or currency conversion.
 
-Release archives are built from the Git repository only. See scripts/audit_release.py.
+Release archives are built from the Git repository only. See scripts/audit_release.py. The audit reads its blocked-word list from the file named in the RELEASE_AUDIT_BLOCKED_WORDS environment variable; the list is kept outside the repository.
